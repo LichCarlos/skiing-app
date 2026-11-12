@@ -7,6 +7,7 @@
 - [部署与发布教程](guide/deployment.md)
 - [公开仓库与 SDK / 凭证边界](guide/repository-security.md)
 - [文章图片不设固定数量上限](engineering/article-images-20261112.md)
+- [SDK 58 补丁与首次公开仓库 CI](engineering/sdk58-maintenance-20261112.md)
 
 以下为历次工程与验收记录，状态按各自日期理解。
 
