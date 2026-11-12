@@ -159,7 +159,13 @@ function references(root: string, files: FileEntry[]) {
     const record = object(value);
     for (const kind of ["js", "css"]) {
       if (!Array.isArray(record[kind])) fail("Missing route asset list");
-      for (const url of record[kind]) webAsset(url);
+      for (const asset of record[kind]) {
+        if (kind === "css" && typeof asset !== "string") {
+          const stylesheet = object(asset);
+          if (stylesheet.type !== "css") fail("Unsupported CSS asset type");
+          webAsset(stylesheet.href);
+        } else webAsset(asset);
+      }
     }
   };
   assets(routes.assets);

@@ -56,7 +56,10 @@ function fixture() {
     "contracts/openapi.lock.json",
     JSON.stringify({ version: "1.50.2", sha256: contractHash }),
   );
-  const assets = { js: ["/_expo/static/js/web/entry.js"], css: [] };
+  const assets = {
+    js: ["/_expo/static/js/web/entry.js"],
+    css: [{ type: "css", href: "/_expo/static/css/editor.css" }],
+  };
   put(
     output,
     "metadata.json",
@@ -99,6 +102,7 @@ function fixture() {
     "export default function render() {}",
   );
   put(output, "client/_expo/static/js/web/entry.js", "console.log('fixture');");
+  put(output, "client/_expo/static/css/editor.css", "body { margin: 0; }");
   return { root, source, output, contractHash };
 }
 function run(source: string, ...args: string[]) {
@@ -196,10 +200,31 @@ void test("rejects missing native, SSR and web asset references before writing m
     "_expo/static/js/ios/entry.hbc",
     "server/_expo/server/render.js",
     "client/_expo/static/js/web/entry.js",
+    "client/_expo/static/css/editor.css",
   ]) {
     const f = fixture();
     unlinkSync(path.join(f.output, file));
     rejected(run(f.source, "seal", f.output), /Missing or empty referenced/);
+    assert(!existsSync(path.join(f.output, "linji-export-manifest.json")));
+    assert(!existsSync(path.join(f.output, "verify-export.ts")));
+  }
+});
+void test("validates structured stylesheet URLs before sealing", () => {
+  for (const css of [
+    [{ type: "css", href: "https://outside.example/editor.css" }],
+    [{ type: "css", href: "/../outside.css" }],
+    [{ type: "css" }],
+    [{ type: "script", href: "/_expo/static/css/editor.css" }],
+  ]) {
+    const f = fixture(),
+      file = path.join(f.output, "server/_expo/routes.json"),
+      routes = JSON.parse(readFileSync(file, "utf8"));
+    routes.assets.css = css;
+    writeFileSync(file, JSON.stringify(routes));
+    rejected(
+      run(f.source, "seal", f.output),
+      /Unsafe|Expected nonempty|Unsupported CSS/,
+    );
     assert(!existsSync(path.join(f.output, "linji-export-manifest.json")));
     assert(!existsSync(path.join(f.output, "verify-export.ts")));
   }
