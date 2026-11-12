@@ -1,0 +1,279 @@
+{
+  "date": "2026-11-05",
+  "palette": {
+    "primary": "#2455F5",
+    "red": "#DC2F43",
+    "yellow": "#EFFF46",
+    "orange": "#FF9A3C",
+    "background": "#EEF7FF"
+  },
+  "openapi": {
+    "version": "1.52.0",
+    "sha256": "4b15275231f7d421b80210b769c2d1cc0d1bc704ec73ce3c5d4839c827e9c84d"
+  },
+  "contrast": [
+    {
+      "name": "blue button",
+      "foreground": "#ffffff",
+      "background": "#2455f5",
+      "ratio": 5.69,
+      "passed": true
+    },
+    {
+      "name": "blue hover",
+      "foreground": "#ffffff",
+      "background": "#183dc2",
+      "ratio": 8.45,
+      "passed": true
+    },
+    {
+      "name": "blue active",
+      "foreground": "#ffffff",
+      "background": "#122f98",
+      "ratio": 11.14,
+      "passed": true
+    },
+    {
+      "name": "yellow action",
+      "foreground": "#17264c",
+      "background": "#efff46",
+      "ratio": 13.44,
+      "passed": true
+    },
+    {
+      "name": "orange action",
+      "foreground": "#17264c",
+      "background": "#ff9a3c",
+      "ratio": 7.01,
+      "passed": true
+    },
+    {
+      "name": "red control",
+      "foreground": "#ffffff",
+      "background": "#dc2f43",
+      "ratio": 4.63,
+      "passed": true
+    },
+    {
+      "name": "body",
+      "foreground": "#17264c",
+      "background": "#ffffff",
+      "ratio": 14.81,
+      "passed": true
+    },
+    {
+      "name": "secondary",
+      "foreground": "#495e80",
+      "background": "#eef7ff",
+      "ratio": 6.06,
+      "passed": true
+    },
+    {
+      "name": "secondary on yellow",
+      "foreground": "#495e80",
+      "background": "#efff46",
+      "ratio": 5.96,
+      "passed": true
+    },
+    {
+      "name": "selected tab",
+      "foreground": "#efff46",
+      "background": "#2455f5",
+      "ratio": 5.16,
+      "passed": true
+    },
+    {
+      "name": "dark selected tab",
+      "foreground": "#17264c",
+      "background": "#ff9ca8",
+      "ratio": 7.46,
+      "passed": true
+    },
+    {
+      "name": "dark body",
+      "foreground": "#eef7fd",
+      "background": "#192f40",
+      "ratio": 12.72,
+      "passed": true
+    },
+    {
+      "name": "dark blue",
+      "foreground": "#102d43",
+      "background": "#92b5ff",
+      "ratio": 6.95,
+      "passed": true
+    },
+    {
+      "name": "dark orange",
+      "foreground": "#17264c",
+      "background": "#ffac60",
+      "ratio": 7.98,
+      "passed": true
+    },
+    {
+      "name": "red label",
+      "foreground": "#dc2f43",
+      "background": "#ffffff",
+      "ratio": 4.63,
+      "passed": true
+    }
+  ],
+  "evidenceDirectory": "D:/linji-local/20261105/dopamine-release/",
+  "limitations": [
+    "浏览器检查与构建不代替全部业务流程和物理真机安装验收。",
+    "本轮未修改后端、数据库、API契约，也未重新验收模型与存储全链路。"
+  ],
+  "scope": "Expo主题与APK交付",
+  "exportedSourceSha256": "cf06834bd3fb281b769430ae016b0f2b93c1ba13ccbf9843ac9bfefec82355ec",
+  "nativeSourceParity": {
+    "files": 217,
+    "sourceSha256": "cf06834bd3fb281b769430ae016b0f2b93c1ba13ccbf9843ac9bfefec82355ec",
+    "verified": true
+  },
+  "tests": {
+    "files": 74,
+    "passed": 1240
+  },
+  "lint": true,
+  "typecheck": true,
+  "exports": ["android", "ios", "web"],
+  "browser": {
+    "evidence": "app-visual-results.json",
+    "checks": [
+      {
+        "name": "feed",
+        "passed": true,
+        "viewport": 390,
+        "page": 390
+      },
+      {
+        "name": "resorts",
+        "passed": true,
+        "viewport": 390,
+        "page": 390
+      },
+      {
+        "name": "knowledge",
+        "passed": true,
+        "viewport": 390,
+        "page": 390
+      },
+      {
+        "name": "profile",
+        "passed": true,
+        "viewport": 390,
+        "page": 390
+      },
+      {
+        "name": "auth",
+        "passed": true,
+        "viewport": 390,
+        "page": 390
+      },
+      {
+        "name": "ai",
+        "passed": true,
+        "viewport": 390,
+        "page": 390
+      },
+      {
+        "name": "settings",
+        "passed": true,
+        "viewport": 390,
+        "page": 390
+      },
+      {
+        "name": "catalog",
+        "passed": true,
+        "viewport": 390,
+        "page": 390
+      },
+      {
+        "name": "guest-catalog-post-query-with-csrf",
+        "passed": true
+      },
+      {
+        "name": "tab-chinese-label-heights",
+        "passed": true
+      },
+      {
+        "name": "filters-expand-and-edit",
+        "passed": true
+      },
+      {
+        "name": "register-switch",
+        "passed": true
+      },
+      {
+        "name": "dark-mode-input-surface",
+        "passed": true
+      },
+      {
+        "name": "auth-layout-320",
+        "passed": true,
+        "viewport": 320,
+        "page": 320
+      },
+      {
+        "name": "auth-layout-768",
+        "passed": true,
+        "viewport": 768,
+        "page": 768
+      },
+      {
+        "name": "account",
+        "passed": true,
+        "viewport": 390,
+        "page": 390
+      },
+      {
+        "name": "profile-edit",
+        "passed": true,
+        "viewport": 390,
+        "page": 390
+      },
+      {
+        "name": "favorites",
+        "passed": true,
+        "viewport": 390,
+        "page": 390
+      },
+      {
+        "name": "own-dynamics",
+        "passed": true,
+        "viewport": 390,
+        "page": 390
+      },
+      {
+        "name": "ai-list",
+        "passed": true,
+        "viewport": 390,
+        "page": 390
+      }
+    ],
+    "errors": [],
+    "scope": "Expo Web, local exported build"
+  },
+  "apk": {
+    "signed": true,
+    "nonDebuggable": true,
+    "deviceInstalled": false,
+    "package": "com.linji.snow.preview",
+    "versionCode": 2,
+    "api": "https://lichcarlos.top/snow-api/api/v1",
+    "version": "1.0.1",
+    "sizeBytes": 37705558,
+    "file": "D:/linji-local/20261105/dopamine-release/linji-snow-1.0.1-arm64.apk",
+    "sha256": "ebc023de93f30bf20062f480f5637d538e6262c7ae90acc61d6ce4bc060fd1a2",
+    "sameCertificate": true,
+    "embeddedBundleBytes": 3594192,
+    "abi": "arm64-v8a"
+  },
+  "publicDownload": {
+    "url": "https://lichcarlos.top/snow-downloads/linji-snow-1.0.1-arm64.apk",
+    "httpStatus": 200,
+    "sizeBytes": 37705558,
+    "sha256": "ebc023de93f30bf20062f480f5637d538e6262c7ae90acc61d6ce4bc060fd1a2",
+    "matchesSignedPackage": true
+  }
+}

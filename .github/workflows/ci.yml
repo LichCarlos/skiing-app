@@ -1,0 +1,67 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    env:
+      EXPO_NO_TELEMETRY: "1"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 11.25.0
+          run_install: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: pnpm
+          cache-dependency-path: pnpm-lock.yaml
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm check
+      - name: Verify native release configuration locally (fixture identity)
+        env:
+          LINJI_ANDROID_PACKAGE: com.linji.fixture
+          LINJI_IOS_BUNDLE_IDENTIFIER: com.linji.fixture
+          LINJI_EAS_PROJECT_ID: b258146a-f734-4d62-96cf-66b7abb70123
+          LINJI_EXPO_OWNER: linji_fixture
+          EXPO_PUBLIC_API_BASE_URL: https://api.linji.example/api/v1
+        run: |
+          LINJI_APP_ENV=preview pnpm release:check
+          LINJI_APP_ENV=production pnpm release:check
+      - run: pnpm openapi:generate
+      - run: git ls-files --error-unmatch contracts/openapi.json contracts/openapi.lock.json src/platform/api/openapi.ts
+      - run: git diff --exit-code -- contracts/openapi.json contracts/openapi.lock.json src/platform/api/openapi.ts
+      - run: pnpm exec expo export --platform all
+      - name: Seal and verify Expo export (bundles, not signed native packages)
+        run: |
+          pnpm artifact:seal "$GITHUB_WORKSPACE/dist"
+          pnpm artifact:verify "$GITHUB_WORKSPACE/dist"
+          node --experimental-strip-types "$GITHUB_WORKSPACE/dist/verify-export.ts" verify "$GITHUB_WORKSPACE/dist"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: linji-expo-bundle-export
+          path: dist/
+          if-no-files-found: error
+          include-hidden-files: true
+          retention-days: 7
+      - name: Export and verify pristine independent source (no services started)
+        run: |
+          node --experimental-strip-types scripts/export-source.ts "$RUNNER_TEMP/linji-app-source" > "$RUNNER_TEMP/linji-app-source-metadata.json"
+          SOURCE_DIGEST=$(node -p "JSON.parse(require('node:fs').readFileSync(process.env.RUNNER_TEMP + '/linji-app-source-metadata.json', 'utf8')).sourceSha256")
+          pnpm source:verify "$RUNNER_TEMP/linji-app-source" "$SOURCE_DIGEST"
+          tar -C "$RUNNER_TEMP/linji-app-source" -czf "$RUNNER_TEMP/linji-app-source.tar.gz" .
+      - uses: actions/upload-artifact@v4
+        with:
+          name: linji-app-source
+          path: |
+            ${{ runner.temp }}/linji-app-source.tar.gz
+            ${{ runner.temp }}/linji-app-source-metadata.json
+          if-no-files-found: error
+          retention-days: 7

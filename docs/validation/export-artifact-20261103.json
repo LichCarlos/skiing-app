@@ -1,0 +1,106 @@
+{
+  "date": "2026-11-03",
+  "phase": "Expo export artifact handoff; before D-51 implementation",
+  "passed": true,
+  "openapi": {
+    "version": "1.50.2",
+    "operations": 143,
+    "sha256": "710ef0cad15dcfb363f77a9fd1463413ca0290946dda9d1c9a7fbea8e77088e0"
+  },
+  "repo": "app",
+  "results": {
+    "vitest": 1162,
+    "sourceExportNode": 8,
+    "artifactNode": 10,
+    "doctor": "20/20",
+    "export": "iOS, Android, Web",
+    "files": 88,
+    "contentSha256": "5c4f8a19e22c614a43483626fc64e9ee2778729ecd256689294da39b481624ac",
+    "artifact": "D:/linji-export-artifact/20261103/app-export",
+    "relocated": "D:/linji-export-artifact/20261103/relocated-export",
+    "seal": 0,
+    "verify": 0,
+    "relocatedVerify": 0
+  },
+  "logs": [
+    {
+      "path": "E:/desktop/lishiqi/app/export-artifact-check.log",
+      "sha256": "acdfaa38bca7349ed91f915f83103d681748cc51f675cd8aaf9437fa4eb883e0"
+    },
+    {
+      "path": "E:/desktop/lishiqi/app/export-artifact-export.log",
+      "sha256": "9062b43736337a741eafd23f399507bd1a1ab4b42931f82c7a022eb9fa65e3cc"
+    },
+    {
+      "path": "E:/desktop/lishiqi/app/export-artifact-focused.log",
+      "sha256": "d165d0efb3f65d8a3c74f2efe99a1ccdb77aad786e2f14a6115dbf77802e1a53"
+    },
+    {
+      "path": "E:/desktop/lishiqi/app/export-artifact-install.log",
+      "sha256": "0c4a0d700302680b4f9628e35a95e0fd77a7b75052f7ca4b34b4f850901dd042"
+    },
+    {
+      "path": "E:/desktop/lishiqi/app/export-artifact-lint-first.log",
+      "sha256": "07f8d2c023d84dd1af49a0240abda8388a490861eaf0880d0dd4da1149666457"
+    },
+    {
+      "path": "E:/desktop/lishiqi/app/export-artifact-lint.log",
+      "sha256": "07f8d2c023d84dd1af49a0240abda8388a490861eaf0880d0dd4da1149666457"
+    },
+    {
+      "path": "E:/desktop/lishiqi/app/export-artifact-post-export-types.log",
+      "sha256": "5a3973f79ed9becd5f23c4feff467513814de7ea381d75a4d2e339aa8b8edca9"
+    },
+    {
+      "path": "E:/desktop/lishiqi/app/export-artifact-relocated.log",
+      "sha256": "deb98fae1eaabcb7051005e9a39a626b85ba4acb1b7c7e6a108451879683f3e0"
+    },
+    {
+      "path": "E:/desktop/lishiqi/app/export-artifact-seal-first.log",
+      "sha256": "538f9f439783dafd14becebac8b43e72d00cf50cf1041be13914004330365386"
+    },
+    {
+      "path": "E:/desktop/lishiqi/app/export-artifact-seal.log",
+      "sha256": "0c40c9b4cdf1f38ece027cf40450ac86eab305c48ef7f5199fd5abe4d866e01c"
+    },
+    {
+      "path": "E:/desktop/lishiqi/app/export-artifact-types.log",
+      "sha256": "5a3973f79ed9becd5f23c4feff467513814de7ea381d75a4d2e339aa8b8edca9"
+    },
+    {
+      "path": "E:/desktop/lishiqi/app/export-artifact-verify.log",
+      "sha256": "d6adffad0488b59c12b33b5ce9ece0a7b67b7b4d0c292d0a0b449798e0ae4f2f"
+    }
+  ],
+  "limitations": [
+    "Local validation only; remote CI not run",
+    "Not signed native binary or browser/device acceptance",
+    "Backend/Web companion source state predates D-51; newer phase evidence supersedes it"
+  ],
+  "sources": [
+    {
+      "path": "E:/desktop/lishiqi/app/scripts/export-artifact.ts",
+      "sha256": "18b4812dc3b95648fe326a2d30aa90de837add082cf8094e6c52779ca0eee8c8"
+    },
+    {
+      "path": "E:/desktop/lishiqi/app/scripts/export-artifact.node-test.ts",
+      "sha256": "689a9d94398c87aa06d4e3821bf4c015bd98f04df32af50e094a1df9fec69cfa"
+    },
+    {
+      "path": "E:/desktop/lishiqi/app/.github/workflows/ci.yml",
+      "sha256": "003e1e357e716e0512d5084fd0d340355a2acda9dfc0f3c97eee011b89ab52e8"
+    },
+    {
+      "path": "E:/desktop/lishiqi/app/package.json",
+      "sha256": "68066d65875019af89f1beb37d271e5908635d04144555cdd320bf33e8d6a3a4"
+    },
+    {
+      "path": "E:/desktop/lishiqi/app/.easignore",
+      "sha256": "56bdf3e211a83990e9a80b1887e535f157e6415725249db06024851ed415a73f"
+    },
+    {
+      "path": "E:/desktop/lishiqi/app/scripts/native-build.test.ts",
+      "sha256": "3562bf0c39914994c5d72b76acf412d6f7fb6d434a803608484f455ea9bdbcba"
+    }
+  ]
+}

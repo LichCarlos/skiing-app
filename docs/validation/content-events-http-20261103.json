@@ -1,0 +1,137 @@
+{
+  "date": "2026-11-03",
+  "passed": true,
+  "scope": "Project knowledge production form/reader/write-gate/lifecycle and Outbox metadata/locator/retry through compiled Nest HTTP and isolated PostgreSQL/pgvector; no new business protocol",
+  "migrations": 24,
+  "liveHttp": {
+    "tests": 27,
+    "newKnowledgeTests": 4,
+    "newEventTests": 2,
+    "database": "linji_admin_authorization_validation",
+    "runtime": "PostgreSQL 17.11 / pgvector 0.8.1",
+    "report": {
+      "path": "D:/linji-content-http/20261103/final/linji-admin-http-owyISh/report.json",
+      "sha256": "0dad3a11bb3e002a31193cb023066e2fc562982506be2a1f8f1184b81363ae2c"
+    },
+    "clientResult": {
+      "path": "D:/linji-content-http/20261103/final/linji-admin-http-owyISh/client-result.json",
+      "sha256": "76353b4fbe204befb6162f71dc9691c77abfea1366c1dcb5e3e45e39f28d6875"
+    },
+    "fixtureVerification": {
+      "path": "D:/linji-content-http/20261103/final/linji-admin-http-owyISh/fixture-verify.log",
+      "sha256": "58a9626af015b2b731eb21bd4e8bbdb7acc131a7cbc1977e6cc91daad8d856c9"
+    },
+    "cleanup": {
+      "path": "D:/linji-content-http/20261103/cleanup.json",
+      "sha256": "7d82cac633ae42f84f14b8fa88aa5a169678b18dcb7519a6cd9a3b33f2ddfe36"
+    },
+    "ports": [
+      60429,
+      63320
+    ],
+    "knowledgeVersion": 7,
+    "knowledgeOutboxEvents": 7,
+    "knowledgeAudits": 7,
+    "retainedFirstPublishTime": "2026-11-03T04:54:10.702Z",
+    "retryAudits": 1,
+    "eventAttempts": 5,
+    "eventMaxAttemptsBefore": 5,
+    "eventMaxAttemptsAfter": 13,
+    "outboxTotal": 13,
+    "retainedRagEvents": 4,
+    "retainedRagAudits": 6
+  },
+  "diagnostics": [
+    "Initial synthetic failed event incorrectly included a lease. The database OutboxEvent_lease_check rejected fixture preparation. Kept the constraint and failure log; fixed only the fixture to a legal failed event without lease and reran in a new isolated database. Both environments stopped."
+  ],
+  "limitations": [
+    "Overall goal remains incomplete; D-49/D-50/D-09 remain unanswered",
+    "No browser Cookie/CORS/React/BFCache or device validation in this stage; Node cookie transport only",
+    "Project knowledge edits have version protection; lifecycle commands still do not carry client expectedVersion",
+    "No cross-reload/device idempotency protocol added",
+    "Kafka dispatch/consumer disabled; pending Outbox is not delivered/indexed completion",
+    "No actual embedding/chat provider, container, signed native package or remote-CI validation",
+    "No Docker start/restart, parent dependency deletion, commit/push/deploy/publish"
+  ],
+  "businessRuntimeChanged": false,
+  "repository": "app",
+  "openapi": {
+    "version": "1.51.1",
+    "operations": 143,
+    "path": "E:/desktop/lishiqi/app/contracts/openapi.json",
+    "sha256": "e5570e24af7bf5670cda3914591924f3c0d4321248c01ce0e7d2a95bd34745a8"
+  },
+  "results": {
+    "frozenInstall": 0,
+    "check": 0,
+    "businessFiles": 66,
+    "businessTests": 1163,
+    "sourceExportNode": 8,
+    "artifactNode": 10,
+    "doctor": "20/20",
+    "exportPlatforms": [
+      "ios",
+      "android",
+      "web"
+    ],
+    "postExportTypes": 0,
+    "seal": 0,
+    "verify": 0,
+    "relocatedVerify": 0,
+    "businessChanged": false
+  },
+  "sources": [
+    {
+      "path": "E:/desktop/lishiqi/app/package.json",
+      "sha256": "68066d65875019af89f1beb37d271e5908635d04144555cdd320bf33e8d6a3a4"
+    },
+    {
+      "path": "E:/desktop/lishiqi/app/scripts/export-artifact.ts",
+      "sha256": "18b4812dc3b95648fe326a2d30aa90de837add082cf8094e6c52779ca0eee8c8"
+    }
+  ],
+  "logs": [
+    {
+      "path": "D:/linji-content-http/20261103/app-install.log",
+      "sha256": "62495d2f136c31037c2d9fe805cc9552f78b638de6a595f5bd2dc029a81f0ad4"
+    },
+    {
+      "path": "D:/linji-content-http/20261103/app-check.log",
+      "sha256": "424d0070a0d7bb44edcffe6055c0f2f5153fa3dd1a6cc81ae628fca10cfa4029"
+    },
+    {
+      "path": "D:/linji-content-http/20261103/app-export.log",
+      "sha256": "359301fe48d92755e913c1ec525a39c914dabc3f5cfceb439ebd2819d6707530"
+    },
+    {
+      "path": "D:/linji-content-http/20261103/app-post-types.log",
+      "sha256": "5a3973f79ed9becd5f23c4feff467513814de7ea381d75a4d2e339aa8b8edca9"
+    },
+    {
+      "path": "D:/linji-content-http/20261103/app-seal.log",
+      "sha256": "a6175ed217e766fa78d8020edb0d84b820fec6623b8dede8c6d64d53ec786b4c"
+    },
+    {
+      "path": "D:/linji-content-http/20261103/app-verify.log",
+      "sha256": "d1a14c3c8d7f5bd695d29ae9c350b62d4be1e87b5b050b18ab2c72450fddee7c"
+    },
+    {
+      "path": "D:/linji-content-http/20261103/app-relocated-verify.log",
+      "sha256": "c1e478659cc08a829defea5ee587fdf74a87e757ce764d888025083790cd5c3c"
+    }
+  ],
+  "failedFixtureLog": {
+    "path": "D:/linji-content-http/20261103/runs/linji-admin-http-f2piht/fixture-prepare.log",
+    "sha256": "b6c67c86c0ca8d495e2d021be73998ff1247903f4439bd2bdfa831d41329b1ad"
+  },
+  "artifact": {
+    "files": 88,
+    "contentSha256": "7c97b8f19908571151d4c3bd2927bdff4ae47ebfa3b6426ef87dff8a0a621efc",
+    "manifest": {
+      "path": "D:/linji-content-http/20261103/app-export/linji-export-manifest.json",
+      "sha256": "081508dcb18dfd02b56ddff4a247185dbafeb86ff75b3f72a344dca7ceb1e840"
+    },
+    "relocated": "D:/linji-content-http/20261103/relocated-export",
+    "nativeInstallable": false
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "date": "2026-11-03",
+  "businessCodeChanged": false,
+  "openapi": {
+    "version": "1.50.2",
+    "operations": 143,
+    "sha256": "710ef0cad15dcfb363f77a9fd1463413ca0290946dda9d1c9a7fbea8e77088e0"
+  },
+  "results": {
+    "install": 0,
+    "check": 0,
+    "tests": 1162,
+    "sourceExportTests": 8,
+    "doctor": "20/20",
+    "exportAllPlatforms": 0,
+    "postExportTypecheck": 0
+  },
+  "output": "D:/linji-admin-http/20261103/app-export",
+  "notValidated": [
+    "browser",
+    "native device",
+    "container",
+    "backend integration by App"
+  ],
+  "logs": [
+    {
+      "path": "E:\\desktop\\lishiqi/app/admin-auth-install.log",
+      "sha256": "21e6ed33161f2719e7696b7a93ab678ae875071b44dfe287f2901178a2a73236"
+    },
+    {
+      "path": "E:\\desktop\\lishiqi/app/admin-auth-check.log",
+      "sha256": "b3337e5657eb02c4426affe3ecf94b230679f28bb02b8ec139101290866d8d6e"
+    },
+    {
+      "path": "E:\\desktop\\lishiqi/app/admin-auth-export.log",
+      "sha256": "5b149659255483c4ee2c707564bff8fd0aecf7981376193c01bf1113a95a5066"
+    },
+    {
+      "path": "E:\\desktop\\lishiqi/app/admin-auth-post-export-types.log",
+      "sha256": "5a3973f79ed9becd5f23c4feff467513814de7ea381d75a4d2e339aa8b8edca9"
+    }
+  ]
+}

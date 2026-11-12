@@ -1,0 +1,224 @@
+{
+  "attempts": [
+    {
+      "path": "D:/linji-field-workflow/20261104/stage-attempt0.log",
+      "sha256": "410001b2927df6653d48bf0a13fed314d4533d4c79b362789322173ca14b5022"
+    },
+    {
+      "path": "D:/linji-field-workflow/20261104/backend-source.log",
+      "sha256": "935d98d75241869658d5edfeb1ea5dbe0acd030bfd884a1902afd68815fdad95"
+    },
+    {
+      "path": "D:/linji-field-workflow/20261104/stage-console.log",
+      "sha256": "21518f655a269d2e615ad28b2f449627c73692de863712d2946e45e91fb87602"
+    },
+    {
+      "path": "D:/linji-field-workflow/20261104/database-runs/linji-native-ldS4EN/report.json",
+      "sha256": "20e0421d5ea6250fb8a75b68cd80ee034d4557f0583112b191c5fa02cee47cf3"
+    },
+    {
+      "path": "D:/linji-field-workflow/20261104/database-runs/linji-native-ldS4EN/database-suite.log",
+      "sha256": "c51c6f08b45f85b25836a9523b147c5071bd41d84c527e7408c39c784f4b5f17"
+    },
+    {
+      "path": "D:/linji-field-workflow/20261104/diagnostic-console.log",
+      "sha256": "b409402deb71c3d2adca5934ad8de263e5bc885e6f7c1473f401f3d5a5ae71f5"
+    },
+    {
+      "path": "D:/linji-field-workflow/20261104/diagnostic-runs/linji-native-q8gQFb/report.json",
+      "sha256": "ee2f79b822a9ab1e704953b1b4e264a75f985fa1296436c5ef6c630f9cc10b61"
+    },
+    {
+      "path": "D:/linji-field-workflow/20261104/diagnostic-runs/linji-native-q8gQFb/database-suite.log",
+      "sha256": "61a1510017424a712f3f0cb7d20ea56318ebb9878d0000ac2355f5c98683a29b"
+    },
+    {
+      "path": "D:/linji-field-workflow/20261104/diagnostic2-console.log",
+      "sha256": "4c0a19c9ea0c1249954a90e2f16d5e12bf48c2eb510f7e3ba6fd722962e19820"
+    }
+  ],
+  "fixtureRepairs": "First full DB run retained 845 prior passes with 13 skipped due missing global ConfigModule. Focused run then caught invalid admin+registered role fixture; replacement fixed. Focused 13 passed before final pristine source run. No product behavior changed.",
+  "date": "2026-11-04",
+  "evidenceVerified": true,
+  "scope": "13 real Nest HTTP/PostgreSQL configuration-to-merchant/public field workflow tests and complete 858 database tests; independent three-repository source copies, frozen installs/checks/builds/exports",
+  "openapiVersion": "1.51.1",
+  "operations": 143,
+  "migrations": 24,
+  "workflowTests": 13,
+  "databaseTests": 858,
+  "commandLedger": {
+    "path": "D:/linji-field-workflow/20261104/final/commands.json",
+    "sha256": "3fe2f0d52b00301378fbae03a1884c2e2e55d7e05b1ee7e6209f31ede1e3974f"
+  },
+  "harness": {
+    "path": "D:/linji-field-workflow/20261104/final/validate-stage.mjs",
+    "sha256": "7cdc8d661c61dac5952ab7986f8ed79d3530cd9090f040426c6367270032a134"
+  },
+  "comparison": {
+    "path": "D:/linji-field-workflow/20261104/final/candidate-comparison.json",
+    "sha256": "13bc5037c1d82ea0a66562121fb8ce9792c8cfe3ae4c73e32cae5192cc2afe52"
+  },
+  "unchangedBusinessSources": [
+    {
+      "repo": "backend",
+      "files": 500,
+      "prior": "D:/linji-admin-storage/20261104/work/backend-final"
+    },
+    {
+      "repo": "web",
+      "files": 557,
+      "prior": "D:/linji-admin-storage/20261104/work/web"
+    },
+    {
+      "repo": "app",
+      "files": 160,
+      "prior": "D:/linji-admin-storage/20261104/work/app"
+    }
+  ],
+  "newTest": {
+    "path": "E:/desktop/lishiqi/backend/test/custom-field-workflow.db-spec.ts",
+    "sha256": "93b7604a810f191e14265f2ee7df9f0875765c409f2b972b6183c2f197f97b89"
+  },
+  "databaseReport": {
+    "path": "D:/linji-field-workflow/20261104/final/database-runs/linji-native-43qM75/report.json",
+    "sha256": "63d13d0deabb2eb65b8e12b71a8be8a1fd94933d9143c11144fca095adda0201"
+  },
+  "databaseLogs": [
+    {
+      "path": "D:/linji-field-workflow/20261104/final/database-runs/linji-native-43qM75/create-database.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:/linji-field-workflow/20261104/final/database-runs/linji-native-43qM75/database-suite.log",
+      "sha256": "e50ee977091c09c2254d9c5b7f424ee22e1853f38be3689e2a375c7c89fc1c9a"
+    },
+    {
+      "path": "D:/linji-field-workflow/20261104/final/database-runs/linji-native-43qM75/initialize.log",
+      "sha256": "8123ae3d8b44c53beccd59b74017db105f018b4c2186f29aafad73e6c941cdf4"
+    },
+    {
+      "path": "D:/linji-field-workflow/20261104/final/database-runs/linji-native-43qM75/migrate-deploy.log",
+      "sha256": "3b272eb3e4655cdf546daf4399faa53bfb76f09660d996df44fbbd2a755628f5"
+    },
+    {
+      "path": "D:/linji-field-workflow/20261104/final/database-runs/linji-native-43qM75/postgres-version.log",
+      "sha256": "236e29990561bee501e02f4e5d1f8cb1220a59091800020301a0f2e35e6fb3d5"
+    },
+    {
+      "path": "D:/linji-field-workflow/20261104/final/database-runs/linji-native-43qM75/seed-first.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:/linji-field-workflow/20261104/final/database-runs/linji-native-43qM75/seed-second.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:/linji-field-workflow/20261104/final/database-runs/linji-native-43qM75/server.log",
+      "sha256": "fe12a5ed81d50a43026ba1e98a8980d413ac773c2b3fefe9aede0e3376042326"
+    },
+    {
+      "path": "D:/linji-field-workflow/20261104/final/database-runs/linji-native-43qM75/start.log",
+      "sha256": "83468a58b9366155730bfcd24e4f618de9349e20a511b54255cb11627a0138eb"
+    },
+    {
+      "path": "D:/linji-field-workflow/20261104/final/database-runs/linji-native-43qM75/stop.log",
+      "sha256": "3a6747065de8c2dbc66a6baa73d5ab09c2c03eb8851704f973ac4b886e6805f2"
+    },
+    {
+      "path": "D:/linji-field-workflow/20261104/final/database-runs/linji-native-43qM75/verify-after.log",
+      "sha256": "321d2e8de69191320715eab9db347c24c91f988a47c24d389572e733331c57e0"
+    },
+    {
+      "path": "D:/linji-field-workflow/20261104/final/database-runs/linji-native-43qM75/verify-before.log",
+      "sha256": "321d2e8de69191320715eab9db347c24c91f988a47c24d389572e733331c57e0"
+    }
+  ],
+  "cleanup": {
+    "databaseStopped": true,
+    "portClosed": true,
+    "passwordFileAbsent": true,
+    "postmasterPidAbsent": true,
+    "testAssertsThirteenTableCountBaselines": true
+  },
+  "limitations": [
+    "Initial admin role assignment and active MerchantProfile are isolated DB fixtures; configuration/authorization/registration/merchant/public operations use real controllers",
+    "No browser/device, production provider, Kafka or real asset storage rerun in this stage; assets absent in this workflow",
+    "Existing lint warnings are retained in check logs; passing commands do not claim zero warnings",
+    "Windows Kafka topic rename AccessDenied remains; Docker/its WSL are not used; denied parent cleanup/Next/Expo startup not retried",
+    "D-49/D-50/D-09 remain undecided; no API/schema/dependency/generated contract/business implementation changes; no commit/push/deploy/publish"
+  ],
+  "overallGoalComplete": false,
+  "repository": "app",
+  "snapshot": {
+    "repo": "app",
+    "cwd": "D:/linji-field-workflow/20261104/final/validated/app",
+    "sourceSha256": "c659d3090168c4acae72b13fe480eeaecd00fbb41ce51835e17e37f59e6d0b56",
+    "files": 318,
+    "store": "D:/linji-source-verify/20261104/stores/app",
+    "reusedOwnStore": true,
+    "manifest": {
+      "path": "D:/linji-field-workflow/20261104/final/validated/app/.source-export.json",
+      "sha256": "99654943d4e2f31fadf0de1a93c0a4530944fc450dc7a81a0500c2b34d6c9c6f"
+    },
+    "matchesOriginalBeforeFinalDocumentation": true
+  },
+  "modules": {
+    "path": "D:/linji-field-workflow/20261104/final/app-module-paths.json",
+    "sha256": "103cb3076fe639cef4229a89566319c841f16f1304ca981c7f0493e9b3f2e057"
+  },
+  "results": {
+    "businessTests": 1217,
+    "sourceToolTests": 20,
+    "exportToolTests": 10,
+    "doctor": "20/20",
+    "platforms": ["ios", "android", "web"],
+    "exportFiles": 88,
+    "nativeInstallable": false
+  },
+  "openapi": {
+    "path": "E:/desktop/lishiqi/app/contracts/openapi.json",
+    "sha256": "e5570e24af7bf5670cda3914591924f3c0d4321248c01ce0e7d2a95bd34745a8"
+  },
+  "logs": [
+    {
+      "path": "D:/linji-field-workflow/20261104/final/app-source.log",
+      "sha256": "1a10b11df622c2388ac66aa2c71871ef354752b8b758c4fca9f41bef8f1f1cfa"
+    },
+    {
+      "path": "D:/linji-field-workflow/20261104/final/app-source-verify.log",
+      "sha256": "377b9c0e0dbe4875dc41e49bbe6ee23705588f09e0670033b6f51f761f164e6b"
+    },
+    {
+      "path": "D:/linji-field-workflow/20261104/final/app-install.log",
+      "sha256": "db8e4261aaef14b48571736b19e92e2477fab27d4460b00ad38ce91fbde655c7"
+    },
+    {
+      "path": "D:/linji-field-workflow/20261104/final/app-check.log",
+      "sha256": "16341a85c46cfb4ba346f023f063e6432d3db9d856980310dd9afce0b32ca8c8"
+    },
+    {
+      "path": "D:/linji-field-workflow/20261104/final/app-export.log",
+      "sha256": "d7056120d16087ff0c64c04313c31140732d758952dcccfca5d10fde7b75553e"
+    },
+    {
+      "path": "D:/linji-field-workflow/20261104/final/app-post-types.log",
+      "sha256": "8366207267355d3e3d5bf3bf6e8c94c5f93f6078c34f08973fa2b38cdda6cc92"
+    },
+    {
+      "path": "D:/linji-field-workflow/20261104/final/app-seal.log",
+      "sha256": "68b271fb2df1b7c8e8d548b0219d88f2ec1ce1f1812ed54b835d88eab0cb57fb"
+    },
+    {
+      "path": "D:/linji-field-workflow/20261104/final/app-verify.log",
+      "sha256": "c8c1bde02006aa82083f1f9a20ddbbfea84ddcc2dc3a90d1d3b02f9ed5a1a2a1"
+    },
+    {
+      "path": "D:/linji-field-workflow/20261104/final/app-copy.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:/linji-field-workflow/20261104/final/app-relocated-verify.log",
+      "sha256": "8445e3fbeb0e4965809d5f2e8d0d36492e0c569f01dd238bca3abfe05ab9cb18"
+    }
+  ]
+}

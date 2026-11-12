@@ -1,0 +1,285 @@
+{
+  "date": "2026-11-03",
+  "evidenceVerified": true,
+  "contractVersion": "1.51.1",
+  "operations": 143,
+  "migrations": 24,
+  "scope": "App favorites account/QueryClient runtime ledger across screens, detached async lease, same-account re-login recovery and account isolation; read-only reconciliation without command replay; no production API or schema changes",
+  "httpSuites": [
+    {
+      "label": "resort",
+      "tests": 10,
+      "completed": true,
+      "output": "D:/linji-app-favorite-recovery/20261103/resort-runtime/linji-resort-http-aGp6yA",
+      "checks": [
+        {
+          "name": "App resort list / real Native-style HTTP and PostgreSQL guest gets public tags, ALL selected tags, exact zero distance and offset pages without hidden resorts",
+          "status": "passed"
+        },
+        {
+          "name": "App resort list / real Native-style HTTP and PostgreSQL explicit favorites update only account projections; repeated add does not invert and another user sees false",
+          "status": "passed"
+        },
+        {
+          "name": "App resort list / real Native-style HTTP and PostgreSQL committed response loss and failed reread block all further writes until read-only review succeeds",
+          "status": "passed"
+        },
+        {
+          "name": "App resort list / real Native-style HTTP and PostgreSQL a new screen waits for the detached committed request to settle, then reviews without another command",
+          "status": "passed"
+        },
+        {
+          "name": "App resort list / real Native-style HTTP and PostgreSQL unknown state survives same-account login but does not block another account in the same cache runtime",
+          "status": "passed"
+        },
+        {
+          "name": "App resort list / real Native-style HTTP and PostgreSQL detail returns the full public projection and hides pending sources from guests",
+          "status": "passed"
+        },
+        {
+          "name": "App resort list / real Native-style HTTP and PostgreSQL personal favorites use real 20+2 offset pages, type filters, detail state and explicit removal",
+          "status": "passed"
+        },
+        {
+          "name": "App resort list / real Native-style HTTP and PostgreSQL same-account re-login prevents old detail, personal list and favorite commands before HTTP",
+          "status": "passed"
+        },
+        {
+          "name": "App resort list / real Native-style HTTP and PostgreSQL a late real detail response cannot cross same-account login or trigger another identity lookup",
+          "status": "passed"
+        },
+        {
+          "name": "App resort list / real Native-style HTTP and PostgreSQL a late real favorites response cannot cross same-account login or trigger another identity lookup",
+          "status": "passed"
+        }
+      ],
+      "references": [
+        {
+          "path": "D:/linji-app-favorite-recovery/20261103/resort-runtime/linji-resort-http-aGp6yA/report.json",
+          "sha256": "5589d76abb03e9f026c625b2f2387ae2ab5b6cedd68f6e3e80a307e9d048eeb6"
+        },
+        {
+          "path": "D:/linji-app-favorite-recovery/20261103/resort-runtime/linji-resort-http-aGp6yA/client-result.json",
+          "sha256": "954aebd5b838b783fc6de1b892dac2a3eff6c92d6925468bd6cd0952d400f887"
+        },
+        {
+          "path": "D:/linji-app-favorite-recovery/20261103/resort-runtime/linji-resort-http-aGp6yA/ready.json",
+          "sha256": "864630a5ac886581ffa0c2dae0557ced03ef7a62acaa1c0cf3e28251e0e4cfaf"
+        },
+        {
+          "path": "D:/linji-app-favorite-recovery/20261103/resort-runtime/linji-resort-http-aGp6yA/migrate-deploy.log",
+          "sha256": "649a16bcb8816ecbb8943557200c2cf4fe96f2162ce11c545008ad917d835203"
+        },
+        {
+          "path": "D:/linji-app-favorite-recovery/20261103/resort-runtime/linji-resort-http-aGp6yA/seed-first.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "D:/linji-app-favorite-recovery/20261103/resort-runtime/linji-resort-http-aGp6yA/seed-second.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "D:/linji-app-favorite-recovery/20261103/resort-runtime/linji-resort-http-aGp6yA/verify-before.log",
+          "sha256": "321d2e8de69191320715eab9db347c24c91f988a47c24d389572e733331c57e0"
+        },
+        {
+          "path": "D:/linji-app-favorite-recovery/20261103/resort-runtime/linji-resort-http-aGp6yA/fixture-prepare.log",
+          "sha256": "e567afc388616a3b64c626ea34a39ec9d8f1e67dacbe77b2840ad5ed6db65403"
+        },
+        {
+          "path": "D:/linji-app-favorite-recovery/20261103/resort-runtime/linji-resort-http-aGp6yA/fixture-verify.log",
+          "sha256": "27e021fc0da09ca6f8d859b77c1f4bb81181d81d28f7f9da3110fac8d654bfa7"
+        },
+        {
+          "path": "D:/linji-app-favorite-recovery/20261103/resort-runtime/linji-resort-http-aGp6yA/verify-after.log",
+          "sha256": "321d2e8de69191320715eab9db347c24c91f988a47c24d389572e733331c57e0"
+        }
+      ],
+      "cleanup": {
+        "path": "D:/linji-app-favorite-recovery/20261103/resort-cleanup.json",
+        "sha256": "1128f0fe1b1799a4358b52f37a0cf19534db5dc14fc3b2453440566bfbfe0ae3"
+      }
+    },
+    {
+      "label": "admin",
+      "tests": 77,
+      "completed": true,
+      "output": "D:/linji-app-favorite-recovery/20261103/admin-runtime/linji-admin-http-3D28QT",
+      "checks": {
+        "defaults": true,
+        "versionConflict": true,
+        "unknownRecovered": true,
+        "publicProjection": true,
+        "roleDenied": true,
+        "sessionRevocationRejected": true,
+        "sessionRestored": true
+      },
+      "references": [
+        {
+          "path": "D:/linji-app-favorite-recovery/20261103/admin-runtime/linji-admin-http-3D28QT/report.json",
+          "sha256": "175654f7928c440394faacfe9dcc1f0b0e8ac83f135718448ffbc0e1a3cedced"
+        },
+        {
+          "path": "D:/linji-app-favorite-recovery/20261103/admin-runtime/linji-admin-http-3D28QT/client-result.json",
+          "sha256": "ec76d667d403869946777daad30bc0fbe4f8c914cb7f82190074710480dd09b8"
+        },
+        {
+          "path": "D:/linji-app-favorite-recovery/20261103/admin-runtime/linji-admin-http-3D28QT/ready.json",
+          "sha256": "a7c3a82af68c8ee27d17b79c6977bf9f3c6065922ff9649ef2e67cdc40f8dc6d"
+        },
+        {
+          "path": "D:/linji-app-favorite-recovery/20261103/admin-runtime/linji-admin-http-3D28QT/migrate-deploy.log",
+          "sha256": "58373c414d8d70580785d19f27f1dca5630cc47bd58c06acd07de530ca57a9af"
+        },
+        {
+          "path": "D:/linji-app-favorite-recovery/20261103/admin-runtime/linji-admin-http-3D28QT/seed-first.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "D:/linji-app-favorite-recovery/20261103/admin-runtime/linji-admin-http-3D28QT/seed-second.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "D:/linji-app-favorite-recovery/20261103/admin-runtime/linji-admin-http-3D28QT/verify-before.log",
+          "sha256": "321d2e8de69191320715eab9db347c24c91f988a47c24d389572e733331c57e0"
+        },
+        {
+          "path": "D:/linji-app-favorite-recovery/20261103/admin-runtime/linji-admin-http-3D28QT/fixture-prepare.log",
+          "sha256": "7bf60279f856d9b2caad909c6527a08a11f52bef20e99baab8bdc3d5f00f9e56"
+        },
+        {
+          "path": "D:/linji-app-favorite-recovery/20261103/admin-runtime/linji-admin-http-3D28QT/fixture-verify.log",
+          "sha256": "58a9626af015b2b731eb21bd4e8bbdb7acc131a7cbc1977e6cc91daad8d856c9"
+        },
+        {
+          "path": "D:/linji-app-favorite-recovery/20261103/admin-runtime/linji-admin-http-3D28QT/verify-after.log",
+          "sha256": "321d2e8de69191320715eab9db347c24c91f988a47c24d389572e733331c57e0"
+        }
+      ],
+      "cleanup": {
+        "path": "D:/linji-app-favorite-recovery/20261103/admin-cleanup.json",
+        "sha256": "a261e1af116334a706ca21bce4120d1dcb4898f76771219c4318d0e0fa7f000d"
+      }
+    }
+  ],
+  "regression": {
+    "newTests": 17,
+    "targetedTests": 380,
+    "newHttpTests": 2,
+    "updatedHttpScenario": "Response-loss recovery replaces FavoriteRun completely",
+    "targetedLog": {
+      "path": "D:/linji-app-favorite-recovery/20261103/targeted.log",
+      "sha256": "c73c8d821d49e0ba7357c50603bfb4abfc4ccdc7f24c69f9d502a0b970a530f2"
+    }
+  },
+  "commandLedger": {
+    "path": "D:/linji-app-favorite-recovery/20261103/commands.json",
+    "sha256": "54108e9d1f11a328e28925d59cedca8456539ad8a7ccda25509105bc29c17df2"
+  },
+  "limitations": [
+    "Controller replacement and memory SecureStore prove runtime logic/real Native-style HTTP, not actual React Router navigation/browser/device/SecureStore",
+    "Ledger survives screen unmount/recreation and same-account login only within one QueryClient runtime, not process exit/full page reload/cross-device; no persistent ledger or credentials added",
+    "Promise settlement and read-end identity checks do not prove remote in-flight completion or cross-request atomic authorization",
+    "Production API and database schema unchanged; no current full historical database, real provider/storage/container/remote CI acceptance",
+    "Windows Kafka AccessDenied remains unresolved; Docker and its WSL distribution were not started/restarted/used",
+    "D-49/D-50/D-09 remain unanswered and unimplemented; overall project incomplete",
+    "No commit/push/deploy/publish or denied action retried"
+  ],
+  "repository": "app",
+  "openapi": {
+    "path": "E:/desktop/lishiqi/app/contracts/openapi.json",
+    "sha256": "e5570e24af7bf5670cda3914591924f3c0d4321248c01ce0e7d2a95bd34745a8"
+  },
+  "results": {
+    "frozenInstall": 0,
+    "check": 0,
+    "businessTests": 1180,
+    "newTests": 17,
+    "toolTests": 18,
+    "doctor": "20/20",
+    "exportPlatforms": ["ios", "android", "web"],
+    "postExportTypes": 0,
+    "seal": 0,
+    "verify": 0,
+    "relocatedVerify": 0,
+    "businessCodeChanged": true
+  },
+  "sources": [
+    {
+      "path": "E:/desktop/lishiqi/app/src/features/favorites/favorite-recovery.ts",
+      "sha256": "ffb1b9a67bdfbca26f2847572a45de78bf7674a9ea99ace26df65aec0abf93c2"
+    },
+    {
+      "path": "E:/desktop/lishiqi/app/src/features/favorites/favorite-run.ts",
+      "sha256": "ddc37a50a4464c0c5ce03f8c6ecfd590d083e452a905eb50d745529be3858033"
+    },
+    {
+      "path": "E:/desktop/lishiqi/app/src/features/favorites/use-favorite-run.ts",
+      "sha256": "a9a2f6739b698e93022bfd767135dc0adf7315bd74e2016532ac1deb83279c22"
+    },
+    {
+      "path": "E:/desktop/lishiqi/app/src/features/favorites/favorite-recovery.test.ts",
+      "sha256": "fc27fe1f4ae8217938c73d37a2c67a188312920978aa9705d86d2c96179d0111"
+    },
+    {
+      "path": "E:/desktop/lishiqi/app/src/features/favorites/favorite-run.test.ts",
+      "sha256": "8e072069bfb26e5b4edea53fdd6e7dd06572a2c9f9bc81475394474f88a03ed9"
+    },
+    {
+      "path": "E:/desktop/lishiqi/app/test/resort-list.http-spec.ts",
+      "sha256": "8eb68c5f7b07aca8a47d5b9e7c3123c0e9818f3b62a0a6370923dfbadc264400"
+    },
+    {
+      "path": "E:/desktop/lishiqi/app/vitest.config.resort-list-http.mts",
+      "sha256": "9eab4124dbd13b1e944820050fd1d4a641b3309b6eecb9dee485995dd4920610"
+    }
+  ],
+  "logs": [
+    {
+      "path": "D:/linji-app-favorite-recovery/20261103/app-install.log",
+      "sha256": "2fbb4263e0f96fcd574f7ba89e017c4971dc4cf5986f4b68c561239daa9ecab2"
+    },
+    {
+      "path": "D:/linji-app-favorite-recovery/20261103/app-check.log",
+      "sha256": "b94eb0f8919364ddf68b2dcc135d6f071ec3b8b2b8202eddc90b9265d3ab8ce2"
+    },
+    {
+      "path": "D:/linji-app-favorite-recovery/20261103/app-export.log",
+      "sha256": "a547e524f6ed9f7c13312eabc3584f7b99656512c43e35d437a4b47388b63f53"
+    },
+    {
+      "path": "D:/linji-app-favorite-recovery/20261103/app-post-types.log",
+      "sha256": "8366207267355d3e3d5bf3bf6e8c94c5f93f6078c34f08973fa2b38cdda6cc92"
+    },
+    {
+      "path": "D:/linji-app-favorite-recovery/20261103/app-seal.log",
+      "sha256": "2990264e6c44a35e9ad9ba6e4b0adbfef771877f709e30a8fc9be32f549078e6"
+    },
+    {
+      "path": "D:/linji-app-favorite-recovery/20261103/app-verify.log",
+      "sha256": "71fb63e020941067268274cc058fe9c136a728623d4989bd990fb5b4baddf714"
+    },
+    {
+      "path": "D:/linji-app-favorite-recovery/20261103/app-copy.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:/linji-app-favorite-recovery/20261103/app-relocated-verify.log",
+      "sha256": "19d165b8f26f32998b2ee63f79ea78f0aa079a1b1b3ba1f80cefcff8511ada71"
+    },
+    {
+      "path": "D:/linji-app-favorite-recovery/20261103/resort-http.log",
+      "sha256": "d866561abf2eb42e61c0ddac0ebcebf0691554fea396b9d1bce63188eb6b0439"
+    }
+  ],
+  "artifact": {
+    "files": 88,
+    "contentSha256": "af0d536229ad10ef394d4e4009a117a3e95a0490639c1036e445f6de977aaa9f",
+    "manifest": {
+      "path": "D:/linji-app-favorite-recovery/20261103/app-export/linji-export-manifest.json",
+      "sha256": "b98b5b3c851f338e24fb631ff92ca96146bccb625a75b3234a9211bf9bce6f13"
+    },
+    "relocated": "D:/linji-app-favorite-recovery/20261103/relocated-export",
+    "nativeInstallable": false
+  }
+}

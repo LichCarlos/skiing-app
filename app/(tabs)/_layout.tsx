@@ -1,66 +1,95 @@
-import { SymbolView } from 'expo-symbols';
-import { Link, Tabs } from 'expo-router';
-import { Platform, Pressable } from 'react-native';
-
-import Colors from '@/constants/Colors';
-import { useColorScheme } from '@/components/useColorScheme';
-import { useClientOnlyValue } from '@/components/useClientOnlyValue';
+import { Tabs } from "expo-router";
+import { SymbolView } from "expo-symbols";
+import { useAppColors } from "../../src/theme";
 
 export default function TabLayout() {
-  const colorScheme = useColorScheme();
-
+  const colors = useAppColors();
   return (
     <Tabs
       screenOptions={{
-        tabBarActiveTintColor: Colors[colorScheme].tint,
-        // Disable the static render of the header on web
-        // to prevent a hydration error in React Navigation v6.
-        headerShown: useClientOnlyValue(false, true),
-      }}>
+        headerShown: false,
+        headerTitleAlign: "left",
+        headerShadowVisible: false,
+        headerStyle: { backgroundColor: colors.background },
+        headerTintColor: colors.text,
+        tabBarActiveTintColor: colors.highlight,
+        tabBarInactiveTintColor: colors.onImage,
+        tabBarStyle: {
+          minHeight: 64,
+          paddingBottom: 8,
+          backgroundColor: colors.navigation,
+          borderTopColor: colors.navigation,
+        },
+        tabBarLabelStyle: {
+          fontSize: 12,
+          lineHeight: 18,
+          fontWeight: "600",
+          flexShrink: 0,
+        },
+        tabBarItemStyle: { paddingVertical: 0 },
+      }}
+    >
       <Tabs.Screen
         name="index"
         options={{
-          title: 'Tab One',
-          tabBarIcon: ({ color }) => (
+          title: "动态",
+          tabBarIcon: ({ color, size }) => (
             <SymbolView
               name={{
-                ios: 'chevron.left.forwardslash.chevron.right',
-                android: 'code',
-                web: 'code',
+                ios: "bubble.left.and.bubble.right",
+                android: "forum",
+                web: "forum",
               }}
               tintColor={color}
-              size={28}
+              size={size}
             />
-          ),
-          headerRight: () => (
-            <Link href="/modal" asChild>
-              <Pressable style={{ marginRight: 15 }}>
-                {({ pressed }) => (
-                  <SymbolView
-                    name={{ ios: 'info.circle', android: 'info', web: 'info' }}
-                    size={25}
-                    tintColor={Colors[colorScheme].text}
-                    style={{ opacity: pressed ? 0.5 : 1 }}
-                  />
-                )}
-              </Pressable>
-            </Link>
           ),
         }}
       />
       <Tabs.Screen
-        name="two"
+        name="resorts"
         options={{
-          title: 'Tab Two',
-          tabBarIcon: ({ color }) => (
+          title: "雪场",
+          tabBarIcon: ({ color, size }) => (
             <SymbolView
               name={{
-                ios: 'chevron.left.forwardslash.chevron.right',
-                android: 'code',
-                web: 'code',
+                ios: "mountain.2",
+                android: "landscape",
+                web: "landscape",
               }}
               tintColor={color}
-              size={28}
+              size={size}
+            />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="knowledge"
+        options={{
+          title: "知识",
+          tabBarIcon: ({ color, size }) => (
+            <SymbolView
+              name={{ ios: "book", android: "menu_book", web: "menu_book" }}
+              tintColor={color}
+              size={size}
+            />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="profile"
+        options={{
+          title: "我的",
+          headerShown: true,
+          tabBarIcon: ({ color, size }) => (
+            <SymbolView
+              name={{
+                ios: "person.crop.circle",
+                android: "account_circle",
+                web: "account_circle",
+              }}
+              tintColor={color}
+              size={size}
             />
           ),
         }}

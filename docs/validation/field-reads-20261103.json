@@ -1,0 +1,158 @@
+{
+  "date": "2026-11-03",
+  "evidenceVerified": true,
+  "contractVersion": "1.51.1",
+  "operations": 143,
+  "migrations": 24,
+  "scope": "Custom field/group VO and command-receipt projection, identity/visibility and recovery protection; real dictionary-backed lifecycle, version conflict, group protection and read-time revocation",
+  "http": {
+    "tests": 51,
+    "newTests": 2,
+    "output": "D:/linji-field-reads/20261103/admin-runtime/linji-admin-http-q33UrA",
+    "checks": {
+      "fieldId": 3,
+      "lifecycle": true,
+      "staleRejected": true,
+      "groupProtected": true,
+      "revocationRejected": true
+    },
+    "references": [
+      {
+        "path": "D:/linji-field-reads/20261103/admin-runtime/linji-admin-http-q33UrA/report.json",
+        "sha256": "67f4cde8ac80e2f9dc264c14a1cfe25e9bc08b23818b283098a4f68c615bce21"
+      },
+      {
+        "path": "D:/linji-field-reads/20261103/admin-runtime/linji-admin-http-q33UrA/client-result.json",
+        "sha256": "08fd3a40a00240a7b983fb0e75b8b362078e04c3af2a0cb19aa35ace0a489d9f"
+      },
+      {
+        "path": "D:/linji-field-reads/20261103/admin-runtime/linji-admin-http-q33UrA/ready.json",
+        "sha256": "0e28eaf16da83103391d9154a036646de3c9ad1d6a6d6d4a86bacbc63cc8cd4c"
+      },
+      {
+        "path": "D:/linji-field-reads/20261103/admin-runtime/linji-admin-http-q33UrA/migrate-deploy.log",
+        "sha256": "d968ba64edf7877b6573268c09e326999aaa35f895a2ddf0c63557fb4c764554"
+      },
+      {
+        "path": "D:/linji-field-reads/20261103/admin-runtime/linji-admin-http-q33UrA/seed-first.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "D:/linji-field-reads/20261103/admin-runtime/linji-admin-http-q33UrA/seed-second.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "D:/linji-field-reads/20261103/admin-runtime/linji-admin-http-q33UrA/verify-before.log",
+        "sha256": "321d2e8de69191320715eab9db347c24c91f988a47c24d389572e733331c57e0"
+      },
+      {
+        "path": "D:/linji-field-reads/20261103/admin-runtime/linji-admin-http-q33UrA/fixture-verify.log",
+        "sha256": "58a9626af015b2b731eb21bd4e8bbdb7acc131a7cbc1977e6cc91daad8d856c9"
+      },
+      {
+        "path": "D:/linji-field-reads/20261103/admin-runtime/linji-admin-http-q33UrA/verify-after.log",
+        "sha256": "321d2e8de69191320715eab9db347c24c91f988a47c24d389572e733331c57e0"
+      }
+    ],
+    "cleanup": {
+      "path": "D:/linji-field-reads/20261103/cleanup.json",
+      "sha256": "0285136a320b57c25eab8a58fe5df88d794cfd05b474e67335c94683c560a2bd"
+    }
+  },
+  "regression": {
+    "newTests": 55,
+    "fieldTests": 179,
+    "initialPassed": 179,
+    "initialRun": {
+      "path": "D:/linji-field-reads/20261103/targeted-first.log",
+      "sha256": "4ec0411125e6707d1ed7fe236a7003794b86fe91179a2541a04e7cbce6a09af4"
+    }
+  },
+  "limitations": [
+    "51 HTTP tests use actual Nest/PostgreSQL and a Node Cookie adapter; lifecycle tests simulate Hooks/EventTarget and do not prove actual browser/React/BFCache/device behavior",
+    "Read-end identity verification is not a cross-request atomic data/permission snapshot; backend authorization remains authoritative",
+    "No current full database suite, real Kafka/Inbox/timers/providers/storage/container or remote CI acceptance",
+    "Existing Windows Kafka AccessDenied remains unresolved; Docker and its WSL distribution were not started/restarted/used",
+    "D-49/D-50/D-09 remain unanswered and unimplemented; project incomplete",
+    "No commit/push/deploy/publish or denied action retried"
+  ],
+  "repository": "app",
+  "openapi": {
+    "path": "E:/desktop/lishiqi/app/contracts/openapi.json",
+    "sha256": "e5570e24af7bf5670cda3914591924f3c0d4321248c01ce0e7d2a95bd34745a8"
+  },
+  "results": {
+    "frozenInstall": 0,
+    "check": 0,
+    "businessFiles": 66,
+    "businessTests": 1163,
+    "sourceExportNode": 8,
+    "artifactNode": 10,
+    "doctor": "20/20",
+    "exportPlatforms": [
+      "ios",
+      "android",
+      "web"
+    ],
+    "postExportTypes": 0,
+    "seal": 0,
+    "verify": 0,
+    "relocatedVerify": 0,
+    "businessCodeChanged": false,
+    "initialRelocationCommand": "Failed because orchestration used nonexistent verify-artifact.mjs; corrected to bundled verify-export.ts; original failures retained; second invocation incorrectly supplied contract path instead of SHA-256, corrected without artifact changes"
+  },
+  "sources": [
+    {
+      "path": "E:/desktop/lishiqi/app/package.json",
+      "sha256": "68066d65875019af89f1beb37d271e5908635d04144555cdd320bf33e8d6a3a4"
+    }
+  ],
+  "logs": [
+    {
+      "path": "D:/linji-field-reads/20261103/app-install.log",
+      "sha256": "ba2d930c091c68573172b9186cde9bb36342ad2e968986fe5472c33a03ff2778"
+    },
+    {
+      "path": "D:/linji-field-reads/20261103/app-check.log",
+      "sha256": "c0f4816356659ba1900e799237b47bc2c81272c917afd6bfa62500382bc816f5"
+    },
+    {
+      "path": "D:/linji-field-reads/20261103/app-export.log",
+      "sha256": "1cc1e228e71acd70bd63c93d754eb1cefed8ab0ebe4938e0131a84b5b4e7c39e"
+    },
+    {
+      "path": "D:/linji-field-reads/20261103/app-post-types.log",
+      "sha256": "5a3973f79ed9becd5f23c4feff467513814de7ea381d75a4d2e339aa8b8edca9"
+    },
+    {
+      "path": "D:/linji-field-reads/20261103/app-seal.log",
+      "sha256": "e86ad1018f28045a21a5ca9b0570a4e90080a34eadc1fa2438518a62cddbe6c2"
+    },
+    {
+      "path": "D:/linji-field-reads/20261103/app-verify.log",
+      "sha256": "30e3fbfe9548dabf3d124bca78391392881d74162b8512147092ac6e9d03631c"
+    },
+    {
+      "path": "D:/linji-field-reads/20261103/app-relocated-first.log",
+      "sha256": "ef2c70e44356c78fbfc1a22868f97dc6f6570d65d958b885519acdb21627359b"
+    },
+    {
+      "path": "D:/linji-field-reads/20261103/app-relocated-second.log",
+      "sha256": "d00e2330858d7d0cc157d74c8a4b045fc242bbd52a83f482c0371633cd6ea96b"
+    },
+    {
+      "path": "D:/linji-field-reads/20261103/app-relocated-verify.log",
+      "sha256": "56d6a9d8045e4f74e1bbe6dd3048041b4e922ac5e2329d9c8ac35aaf7ae2ed8b"
+    }
+  ],
+  "artifact": {
+    "files": 88,
+    "contentSha256": "4fe2b627a3b2d3b19767a610a6b1089b9d5803f07f59ca135bceca0d367fadf6",
+    "manifest": {
+      "path": "D:/linji-field-reads/20261103/app-export/linji-export-manifest.json",
+      "sha256": "1005973f89d37be4301115d709a0c3e75812855bbac84804a04b9414a0a75759"
+    },
+    "relocated": "D:/linji-field-reads/20261103/relocated-export",
+    "nativeInstallable": false
+  }
+}

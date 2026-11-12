@@ -1,0 +1,11 @@
+title = "Linji App security; narrowly scoped public checksum exception"
+
+[extend]
+useDefault = true
+
+[[allowlists]]
+description = "Public OpenAPI SHA-256 checksums in validation records"
+condition = "AND"
+paths = ['''docs/validation/[^\r\n]+\.json$''']
+regexTarget = "match"
+regexes = ['''(?i)openapiSha256"\s*:\s*"[a-f0-9]{64}"''']

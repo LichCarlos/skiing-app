@@ -1,0 +1,19 @@
+{
+  "date": "2026-11-03",
+  "baseline": "D:/linji-source-export/20261103/run-01/app/.source-export.json",
+  "baselineSourceSha256": "beaa262b5eeae8dd486c3d26cbb1cf5b8e52712c20362aa00abee53cd73c0b9c",
+  "compared": 230,
+  "excluded": [
+    "README.md",
+    ".gitignore",
+    "docs/",
+    ".claude/",
+    "*.log",
+    "already deleted Git paths"
+  ],
+  "mismatched": [],
+  "added": [],
+  "passed": true,
+  "validationRerun": false,
+  "priorValidation": "docs/validation/admin-authorization-companion-20261103.json"
+}

@@ -1,0 +1,99 @@
+{
+  "date": "2026-11-03",
+  "passed": true,
+  "openapi": {
+    "version": "1.51.0",
+    "operations": 143,
+    "path": "E:/desktop/lishiqi/app/contracts/openapi.json",
+    "sha256": "4fa8529fe48872254651a095f20ce04cd7c94fe349d00e4149824bcdebfa03f8"
+  },
+  "results": {
+    "frozenInstall": 0,
+    "check": 0,
+    "vitestFiles": 66,
+    "vitestTests": 1163,
+    "sourceExportNode": 8,
+    "artifactNode": 10,
+    "doctor": "20/20",
+    "export": "iOS, Android, Web",
+    "postExportTypes": 0,
+    "seal": 0,
+    "verify": 0,
+    "relocatedVerify": 0
+  },
+  "artifact": {
+    "path": "D:/linji-login-limit/20261103/app-export/linji-export-manifest.json",
+    "relocated": "D:/linji-login-limit/20261103/relocated-export",
+    "files": 88,
+    "contentSha256": "5c9b087f12de3e82ade287a87278b3068ad0f159d5877e3f33df8fe8bb698991",
+    "sha256": "ec6184ac8185170caaaa1f15885ba48aa8dfe25d92b4c803330e8b070cc6b27b"
+  },
+  "sources": [
+    {
+      "path": "E:/desktop/lishiqi/app/src/features/auth/auth-form-run.ts",
+      "sha256": "4b738656677beea42b171b5bfce1aed2bd0a8d93e85b069c0eee8eafbef8fdde"
+    },
+    {
+      "path": "E:/desktop/lishiqi/app/src/features/auth/auth-form-run.test.ts",
+      "sha256": "89d77abe05f64732f8251b1a1a911b46e466ad4221acf9f85a7416ed050b7aaa"
+    },
+    {
+      "path": "E:/desktop/lishiqi/app/src/platform/api/openapi.ts",
+      "sha256": "7f750fb687eb2bfe6f4c19cf0cf4f497be46f642ff60feaebb8fadb513d34d78"
+    },
+    {
+      "path": "E:/desktop/lishiqi/app/contracts/openapi.lock.json",
+      "sha256": "23acc8f719e2d3ed507ad5e90505218de5e1761c54bc9f49993c589d5b98909e"
+    },
+    {
+      "path": "E:/desktop/lishiqi/app/scripts/export-artifact.ts",
+      "sha256": "18b4812dc3b95648fe326a2d30aa90de837add082cf8094e6c52779ca0eee8c8"
+    },
+    {
+      "path": "E:/desktop/lishiqi/app/scripts/export-artifact.node-test.ts",
+      "sha256": "689a9d94398c87aa06d4e3821bf4c015bd98f04df32af50e094a1df9fec69cfa"
+    },
+    {
+      "path": "E:/desktop/lishiqi/app/.github/workflows/ci.yml",
+      "sha256": "003e1e357e716e0512d5084fd0d340355a2acda9dfc0f3c97eee011b89ab52e8"
+    }
+  ],
+  "logs": [
+    {
+      "path": "E:/desktop/lishiqi/app/login-limit-check.log",
+      "sha256": "6d82554df16931c68f83f79b8cb84638106397cff445f7720328bfff494f84da"
+    },
+    {
+      "path": "E:/desktop/lishiqi/app/login-limit-export.log",
+      "sha256": "dc361e36cbd5019c782e34906c82488d7302af238bb45abf294c05d36a4ba4e7"
+    },
+    {
+      "path": "E:/desktop/lishiqi/app/login-limit-install.log",
+      "sha256": "aae6bf15e1ebd5ef2216d33a5ea136912c93e8ba30c441f4ffddac95a6b9f771"
+    },
+    {
+      "path": "E:/desktop/lishiqi/app/login-limit-openapi.log",
+      "sha256": "2f9acca272957443d9744262fd8673cb85c32775cd4e857ce9ed7d469ae4ba4c"
+    },
+    {
+      "path": "E:/desktop/lishiqi/app/login-limit-post-export-types.log",
+      "sha256": "5a3973f79ed9becd5f23c4feff467513814de7ea381d75a4d2e339aa8b8edca9"
+    },
+    {
+      "path": "E:/desktop/lishiqi/app/login-limit-relocated.log",
+      "sha256": "c11d614efddf436890f2ee1b21ee17071f780b605fa052cce33083b3dee5d4ca"
+    },
+    {
+      "path": "E:/desktop/lishiqi/app/login-limit-seal.log",
+      "sha256": "5ca04a30278f397d0060dd4df9ba620cac1d2671c338c9ed7acc25f65eea749c"
+    },
+    {
+      "path": "E:/desktop/lishiqi/app/login-limit-verify.log",
+      "sha256": "a0b52f0f6160c15479d408350e519363824c0878a2e831d7d6f1c803368046cd"
+    }
+  ],
+  "limitations": [
+    "Bundle export and integrity only; no APK/AAB/IPA signing, EAS upload, device or Expo Web dev startup",
+    "Remote CI, actual model providers and production environment not accepted"
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "date": "2026-11-03",
+  "snapshot": "D:/linji-source-export/20261103/run-01/app",
+  "files": 264,
+  "sourceSha256": "beaa262b5eeae8dd486c3d26cbb1cf5b8e52712c20362aa00abee53cd73c0b9c",
+  "manifestSha256": "27c429642cdf4ec1d0d0547e1a71ab0e77a3470a9d4fcff1081ab7abc63e823e",
+  "openapi": {
+    "version": "1.50.2",
+    "sha256": "710ef0cad15dcfb363f77a9fd1463413ca0290946dda9d1c9a7fbea8e77088e0"
+  },
+  "packageManager": "pnpm@11.25.0",
+  "node": "v22.16.0",
+  "store": "D:/linji-source-export/20261103/run-01/stores/app",
+  "freshStore": true,
+  "originalDependenciesCopied": false,
+  "nodePathAbsent": true,
+  "moduleProof": {
+    "node": "v22.16.0",
+    "nodePathAbsent": true,
+    "modules": [
+      {
+        "name": "expo",
+        "path": "D:\\linji-source-export\\20261103\\run-01\\app\\node_modules\\.pnpm\\expo@58.0.22_@babel+core@7._8b9918dbe62df406f9051570a2155577\\node_modules\\expo\\package.json",
+        "version": "58.0.22"
+      },
+      {
+        "name": "expo-router",
+        "path": "D:\\linji-source-export\\20261103\\run-01\\app\\node_modules\\.pnpm\\expo-router@58.0.29_b99d623fb6c0c31801bb0f89d7c74edf\\node_modules\\expo-router\\package.json",
+        "version": "58.0.29"
+      },
+      {
+        "name": "react-native",
+        "path": "D:\\linji-source-export\\20261103\\run-01\\app\\node_modules\\.pnpm\\react-native@0.88.1_@babel+_0e70fce04735883a06390fdf29c3cd20\\node_modules\\react-native\\package.json",
+        "version": "0.88.1"
+      },
+      {
+        "name": "typescript",
+        "path": "D:\\linji-source-export\\20261103\\run-01\\app\\node_modules\\.pnpm\\typescript@6.0.3\\node_modules\\typescript\\package.json",
+        "version": "6.0.3"
+      }
+    ]
+  },
+  "sourceProof": {
+    "files": 264,
+    "sourceSha256": "beaa262b5eeae8dd486c3d26cbb1cf5b8e52712c20362aa00abee53cd73c0b9c",
+    "sourceUnchanged": true,
+    "gitAbsent": true,
+    "envAbsent": true
+  },
+  "results": {
+    "install": 0,
+    "check": 0,
+    "testFiles": 66,
+    "businessTests": 1162,
+    "sourceExportTests": 8,
+    "doctorPassed": 20,
+    "doctorTotal": 20,
+    "exportAllPlatforms": 0,
+    "postExportTypecheck": 0
+  },
+  "exportOutput": "D:/linji-source-export/20261103/run-01/app-export",
+  "notValidated": [
+    "native signed installation",
+    "device",
+    "SecureStore runtime",
+    "browser Cookie and CSRF",
+    "backend integration",
+    "EAS publication"
+  ],
+  "logs": [
+    {
+      "path": "D:/linji-source-export/20261103/run-01/app/source-export-cold-install.log",
+      "sha256": "865eb7a6439083e15e4f0fc5d843c7828a080d697f2c6114815b7a02c90dfd88"
+    },
+    {
+      "path": "D:/linji-source-export/20261103/run-01/app/source-export-module-proof.log",
+      "sha256": "4aa60cda9b9fc50affe9c443791cb3418702d59a7b8a775814053ceced93e7ae"
+    },
+    {
+      "path": "D:/linji-source-export/20261103/run-01/app/source-export-check.log",
+      "sha256": "a0f2994ff63b0caad3c387579f6fc3a30781d634faee7f5f639d99f050ef0561"
+    },
+    {
+      "path": "D:/linji-source-export/20261103/run-01/app/source-export-export.log",
+      "sha256": "d626bf70df680657422390872786d6b582841384346b4c84ec87821ac31b3c74"
+    },
+    {
+      "path": "D:/linji-source-export/20261103/run-01/app/source-export-post-export-types.log",
+      "sha256": "5a3973f79ed9becd5f23c4feff467513814de7ea381d75a4d2e339aa8b8edca9"
+    }
+  ]
+}

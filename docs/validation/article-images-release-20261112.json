@@ -1,0 +1,24 @@
+{
+  "date": "2026-11-12",
+  "openapi": "1.55.0",
+  "contractSha256": "577397f5d0d50de19a138e4ab80a2213784170a7c0a0579ea4ab6a7afff0352a",
+  "deployment": {
+    "sourceUpdated": true,
+    "newNativePackageBuilt": false
+  },
+  "tests": {
+    "backendUnit": 1528,
+    "backendFrameworkHttp": 178,
+    "cloneDatabaseHttp": 49,
+    "web": 484,
+    "admin": 2752,
+    "app": 1263
+  },
+  "browser": {
+    "mockedApiLocalChecks": 9,
+    "mockedApiLivePageChecks": 9,
+    "realAuthenticatedReadOnlyChecks": 6,
+    "realProductionContentWritten": false
+  },
+  "limits": "No fixed image-count ceiling; per-file, ownership, scanning, content-length and transport limits remain."
+}

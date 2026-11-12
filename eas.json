@@ -1,0 +1,22 @@
+{
+  "cli": { "appVersionSource": "remote" },
+  "build": {
+    "preview": {
+      "node": "22.16.0",
+      "pnpm": "11.25.0",
+      "environment": "preview",
+      "distribution": "internal",
+      "env": { "LINJI_APP_ENV": "preview" },
+      "android": { "buildType": "apk" }
+    },
+    "production": {
+      "node": "22.16.0",
+      "pnpm": "11.25.0",
+      "environment": "production",
+      "distribution": "store",
+      "env": { "LINJI_APP_ENV": "production" },
+      "autoIncrement": true,
+      "android": { "buildType": "app-bundle" }
+    }
+  }
+}

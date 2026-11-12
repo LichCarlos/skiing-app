@@ -1,0 +1,185 @@
+{
+  "date": "2026-11-03",
+  "evidenceVerified": true,
+  "contractVersion": "1.51.1",
+  "operations": 143,
+  "migrations": 24,
+  "scope": "Dictionary type/item full command receipts and empty disable response; iterative nonroot subtree validation and ancestor-cycle rejection; local/end identity isolation; visibility/pagehide cancellation and form clearing; explicit reload/recovery and generation protection; configurable-role actual hierarchical workflow and role revocation during read",
+  "http": {
+    "tests": 75,
+    "newTests": 2,
+    "output": "D:/linji-dictionary-workflow/20261103/final/admin-runtime/linji-admin-http-4F2m2k",
+    "checks": {
+      "rootId": 4,
+      "childId": 5,
+      "lifecycle": true,
+      "cycleRejected": true,
+      "revocationRejected": true
+    },
+    "persistence": {
+      "workflowTypes": 1,
+      "workflowItems": 2,
+      "typeStatus": "disabled",
+      "publiclyReadable": true,
+      "parentStatus": "active",
+      "childStatus": "disabled",
+      "pendingDictionaryEvents": 10,
+      "parentEvents": 4,
+      "childEvents": 6,
+      "successAudits": 8,
+      "totalOutbox": 53
+    },
+    "references": [
+      {
+        "path": "D:/linji-dictionary-workflow/20261103/final/admin-runtime/linji-admin-http-4F2m2k/report.json",
+        "sha256": "8eea5b984855e7ac7ab8a96591275417a836ac04e2af2fffb23f860aa9c6d489"
+      },
+      {
+        "path": "D:/linji-dictionary-workflow/20261103/final/admin-runtime/linji-admin-http-4F2m2k/client-result.json",
+        "sha256": "6e7dc12ef88a771389807bd67347a5039317435553efa92aa4ecbb9d0dce6efb"
+      },
+      {
+        "path": "D:/linji-dictionary-workflow/20261103/final/admin-runtime/linji-admin-http-4F2m2k/ready.json",
+        "sha256": "4fa22862d0bac4edab006e3ca5ef7d98c7d57af8a7237f025ad840a6c993f27f"
+      },
+      {
+        "path": "D:/linji-dictionary-workflow/20261103/final/admin-runtime/linji-admin-http-4F2m2k/migrate-deploy.log",
+        "sha256": "892b30cf0689c2e94fa0f081dba9f96c5c6ab856f16241e3526e8e6a61348b8e"
+      },
+      {
+        "path": "D:/linji-dictionary-workflow/20261103/final/admin-runtime/linji-admin-http-4F2m2k/seed-first.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "D:/linji-dictionary-workflow/20261103/final/admin-runtime/linji-admin-http-4F2m2k/seed-second.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "D:/linji-dictionary-workflow/20261103/final/admin-runtime/linji-admin-http-4F2m2k/verify-before.log",
+        "sha256": "321d2e8de69191320715eab9db347c24c91f988a47c24d389572e733331c57e0"
+      },
+      {
+        "path": "D:/linji-dictionary-workflow/20261103/final/admin-runtime/linji-admin-http-4F2m2k/fixture-verify.log",
+        "sha256": "58a9626af015b2b731eb21bd4e8bbdb7acc131a7cbc1977e6cc91daad8d856c9"
+      },
+      {
+        "path": "D:/linji-dictionary-workflow/20261103/final/admin-runtime/linji-admin-http-4F2m2k/verify-after.log",
+        "sha256": "321d2e8de69191320715eab9db347c24c91f988a47c24d389572e733331c57e0"
+      }
+    ],
+    "cleanup": {
+      "path": "D:/linji-dictionary-workflow/20261103/cleanup.json",
+      "sha256": "b0db684c5cba45589181d1290a6269e7ebd4784fa0ef94811e5af95a88f1218a"
+    }
+  },
+  "regression": {
+    "newTests": 33,
+    "dictionaryCombinedTests": 148
+  },
+  "failures": {
+    "description": "First targeted146 passed; two ancestor-cycle receipt regressions added, final148 passed. First dedicated typecheck rejected test mock without generic call signature; corrected test cast, final dedicated and full checks passed. Failure log retained.",
+    "references": [
+      {
+        "path": "D:/linji-dictionary-workflow/20261103/targeted-first.log",
+        "sha256": "eca3229ddcb375c43e42afe13cb23f539a00d067d3f6352c673e9019918fe0a1"
+      },
+      {
+        "path": "D:/linji-dictionary-workflow/20261103/targeted.log",
+        "sha256": "356f1f41a448f71e0e0d682a96c78f8f3453e27cd78cc9d43b5e57a5a604f454"
+      },
+      {
+        "path": "D:/linji-dictionary-workflow/20261103/admin-types.log",
+        "sha256": "60a1b0c3076118d2e5b260c9c0d147ff8970cba5fb2c606b9b96dec720365c80"
+      },
+      {
+        "path": "D:/linji-dictionary-workflow/20261103/admin-types-final.log",
+        "sha256": "3dd115a54d9decc15d9b6f1babec63f20d21966a914759ea6530c5b714007d15"
+      }
+    ]
+  },
+  "commandLedger": {
+    "path": "D:/linji-dictionary-workflow/20261103/commands.json",
+    "sha256": "06df2c8c5f7b6079f52296a68afe5f10751e09b8fb5728eba9d602be25e00758"
+  },
+  "limitations": [
+    "Simulated Hooks/EventTarget and Node Cookie do not prove actual browser/React/BFCache/device behavior",
+    "Read-end identity verification is not a cross-request atomic permission snapshot; dictionary commands have no new client version/idempotency protocol",
+    "Pending Outbox does not prove Kafka delivery, RAG rebuild, Embedding or model completion",
+    "No current full database suite, real Kafka/providers/storage/container or remote CI acceptance",
+    "Windows Kafka AccessDenied remains unresolved; Docker and its WSL distribution were not started/restarted/used",
+    "D-49/D-50/D-09 remain unanswered and unimplemented; overall project incomplete",
+    "No commit/push/deploy/publish or denied action retried"
+  ],
+  "repository": "app",
+  "openapi": {
+    "path": "E:/desktop/lishiqi/app/contracts/openapi.json",
+    "sha256": "e5570e24af7bf5670cda3914591924f3c0d4321248c01ce0e7d2a95bd34745a8"
+  },
+  "results": {
+    "frozenInstall": 0,
+    "check": 0,
+    "businessTests": 1163,
+    "toolTests": 18,
+    "doctor": "20/20",
+    "exportPlatforms": [
+      "ios",
+      "android",
+      "web"
+    ],
+    "postExportTypes": 0,
+    "seal": 0,
+    "verify": 0,
+    "relocatedVerify": 0,
+    "businessCodeChanged": false
+  },
+  "sources": [
+    {
+      "path": "E:/desktop/lishiqi/app/package.json",
+      "sha256": "68066d65875019af89f1beb37d271e5908635d04144555cdd320bf33e8d6a3a4"
+    }
+  ],
+  "logs": [
+    {
+      "path": "D:/linji-dictionary-workflow/20261103/app-install.log",
+      "sha256": "c6553d3425ba526a83ed18781df507cd6bcbb2291aa485258c501a94ec2e6f1e"
+    },
+    {
+      "path": "D:/linji-dictionary-workflow/20261103/app-check.log",
+      "sha256": "4ce6a099a93da6d656ace1fd5138d6cb3deaa13dd8cf737953a644b251e115f5"
+    },
+    {
+      "path": "D:/linji-dictionary-workflow/20261103/app-export.log",
+      "sha256": "08b91205fac45003e03c4c196159143bd0bd301fd34ae6daedc497cee1012087"
+    },
+    {
+      "path": "D:/linji-dictionary-workflow/20261103/app-post-types.log",
+      "sha256": "8366207267355d3e3d5bf3bf6e8c94c5f93f6078c34f08973fa2b38cdda6cc92"
+    },
+    {
+      "path": "D:/linji-dictionary-workflow/20261103/app-seal.log",
+      "sha256": "1c5bceeb0cd0bf8799b9a480cdc80469417e3c74a1bd288971f0f640cca104b4"
+    },
+    {
+      "path": "D:/linji-dictionary-workflow/20261103/app-verify.log",
+      "sha256": "e2c8fe05dfc453ce2c661897951b3efd053f9a22dd6b7a7f5fe8b13c06285d9e"
+    },
+    {
+      "path": "D:/linji-dictionary-workflow/20261103/app-copy.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:/linji-dictionary-workflow/20261103/app-relocated-verify.log",
+      "sha256": "0a27ed848dd8a0d3620a59c95b8ccab32beaff8d57322543791d56568287d220"
+    }
+  ],
+  "artifact": {
+    "files": 88,
+    "contentSha256": "94ca891d630ba7962214a9b35569b0573a75b84b0537845b2b4138127f76fbea",
+    "manifest": {
+      "path": "D:/linji-dictionary-workflow/20261103/app-export/linji-export-manifest.json",
+      "sha256": "4018d1f6e424bad99735d7511573a3303060af20fcb9f10064aa74b41e1f3340"
+    },
+    "relocated": "D:/linji-dictionary-workflow/20261103/relocated-export",
+    "nativeInstallable": false
+  }
+}

@@ -1,0 +1,157 @@
+{
+  "date": "2026-11-03",
+  "evidenceVerified": true,
+  "contractVersion": "1.51.1",
+  "operations": 143,
+  "migrations": 24,
+  "scope": "Role read/list/edit and authorization bundle projection, identity/visibility cancellation, interrupted writes and configurable selected scope/revocation via real HTTP",
+  "http": {
+    "tests": 45,
+    "newTests": 3,
+    "output": "D:/linji-role-reads/20261103/admin-runtime/linji-admin-http-tNtrbz",
+    "checks": {
+      "rawProjection": true,
+      "emptyPage": true,
+      "selectedScope": true,
+      "foreignDenied": true,
+      "revocationRejected": true
+    },
+    "references": [
+      {
+        "path": "D:/linji-role-reads/20261103/admin-runtime/linji-admin-http-tNtrbz/report.json",
+        "sha256": "80cf57b8e9539dcd4096753feb1088f49ac580c342ec9bcaec18b4913469abed"
+      },
+      {
+        "path": "D:/linji-role-reads/20261103/admin-runtime/linji-admin-http-tNtrbz/client-result.json",
+        "sha256": "d75752cf478f1d6a0a14977d570f5323f1505614771d52186b6bbfab36faea33"
+      },
+      {
+        "path": "D:/linji-role-reads/20261103/admin-runtime/linji-admin-http-tNtrbz/ready.json",
+        "sha256": "f0df89f6d3540f328d0fc5f2c5646aab385ea1827dde0fbf6c50c4dc49014483"
+      },
+      {
+        "path": "D:/linji-role-reads/20261103/admin-runtime/linji-admin-http-tNtrbz/migrate-deploy.log",
+        "sha256": "2ac781ceef236648db5f4980a346b40d19c502f43ea807be95f7e5d096a7d3ea"
+      },
+      {
+        "path": "D:/linji-role-reads/20261103/admin-runtime/linji-admin-http-tNtrbz/seed-first.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "D:/linji-role-reads/20261103/admin-runtime/linji-admin-http-tNtrbz/seed-second.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "D:/linji-role-reads/20261103/admin-runtime/linji-admin-http-tNtrbz/verify-before.log",
+        "sha256": "321d2e8de69191320715eab9db347c24c91f988a47c24d389572e733331c57e0"
+      },
+      {
+        "path": "D:/linji-role-reads/20261103/admin-runtime/linji-admin-http-tNtrbz/fixture-verify.log",
+        "sha256": "58a9626af015b2b731eb21bd4e8bbdb7acc131a7cbc1977e6cc91daad8d856c9"
+      },
+      {
+        "path": "D:/linji-role-reads/20261103/admin-runtime/linji-admin-http-tNtrbz/verify-after.log",
+        "sha256": "321d2e8de69191320715eab9db347c24c91f988a47c24d389572e733331c57e0"
+      }
+    ],
+    "cleanup": {
+      "path": "D:/linji-role-reads/20261103/cleanup.json",
+      "sha256": "bf9233cab23916b6261c50ef49fc7637e9162a6a0bfc5609cfa0ef8600bcaec2"
+    }
+  },
+  "regression": {
+    "newTests": 65,
+    "roleTests": 171,
+    "initialRoleTests": 168,
+    "initialTypeFailure": {
+      "path": "D:/linji-role-reads/20261103/admin-types.log",
+      "sha256": "18feb3134b77c711ffe188effa3c9113c5adcef48f0b37f94cf0d8b947c56c7f"
+    },
+    "resolvedTypes": {
+      "path": "D:/linji-role-reads/20261103/admin-types-fixed.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "initialBuildArgumentFailure": {
+      "path": "D:/linji-role-reads/20261103/web-build.log",
+      "sha256": "745e84bf67c71c90a0744a87f5f34c7e738cca837ba09fbba34851e245a96bfa"
+    }
+  },
+  "limitations": [
+    "45 real HTTP tests use actual Nest/PostgreSQL but a Node Cookie adapter; page lifecycle tests simulate Hooks/EventTarget, not actual React/browser/device acceptance",
+    "Read-end identity verification is not an atomic data/permission snapshot; backend remains authoritative for scope and authorization",
+    "No current full database suite, real Kafka/Inbox/timers/providers/storage/container or remote CI acceptance",
+    "Existing Windows Kafka AccessDenied remains unresolved; Docker and its WSL distribution were not started/restarted/used",
+    "D-49/D-50/D-09 remain unanswered and unimplemented; project incomplete",
+    "No commits/push/deploy/publish or denied actions retried"
+  ],
+  "repository": "app",
+  "openapi": {
+    "path": "E:/desktop/lishiqi/app/contracts/openapi.json",
+    "sha256": "e5570e24af7bf5670cda3914591924f3c0d4321248c01ce0e7d2a95bd34745a8"
+  },
+  "results": {
+    "frozenInstall": 0,
+    "check": 0,
+    "businessFiles": 66,
+    "businessTests": 1163,
+    "sourceExportNode": 8,
+    "artifactNode": 10,
+    "doctor": "20/20",
+    "exportPlatforms": [
+      "ios",
+      "android",
+      "web"
+    ],
+    "postExportTypes": 0,
+    "seal": 0,
+    "verify": 0,
+    "relocatedVerify": 0,
+    "businessCodeChanged": false
+  },
+  "sources": [
+    {
+      "path": "E:/desktop/lishiqi/app/package.json",
+      "sha256": "68066d65875019af89f1beb37d271e5908635d04144555cdd320bf33e8d6a3a4"
+    }
+  ],
+  "logs": [
+    {
+      "path": "D:/linji-role-reads/20261103/app-install.log",
+      "sha256": "dee1a6f2b73b5c03631229917a29c71d72debd7eb48ef33e2d45f54b4fabe6d6"
+    },
+    {
+      "path": "D:/linji-role-reads/20261103/app-check.log",
+      "sha256": "6c4ba6449eee8b0e9bcc0150cac1729d1f9a653f7d47cb6567cdb8044833f6db"
+    },
+    {
+      "path": "D:/linji-role-reads/20261103/app-export.log",
+      "sha256": "98aee33a3ebba546a0c8f0212b1ef60e5fecfa2d17d3971e805b70d01d8fd9a8"
+    },
+    {
+      "path": "D:/linji-role-reads/20261103/app-post-types.log",
+      "sha256": "5a3973f79ed9becd5f23c4feff467513814de7ea381d75a4d2e339aa8b8edca9"
+    },
+    {
+      "path": "D:/linji-role-reads/20261103/app-seal.log",
+      "sha256": "54a587b690a8a617cd061385e600d2adaf4f42476ae17006cd80852260fd32bf"
+    },
+    {
+      "path": "D:/linji-role-reads/20261103/app-verify.log",
+      "sha256": "629f8881bc7dad2da04368cc4c1d77c9663b1f352036b34994362528a5c1fead"
+    },
+    {
+      "path": "D:/linji-role-reads/20261103/app-relocated-verify.log",
+      "sha256": "6babb928f8438390373cc328539f46f096440f1592485cc977d130e3979a8ed1"
+    }
+  ],
+  "artifact": {
+    "files": 88,
+    "contentSha256": "f578a8bf3f40fd06996a06b586b91d61e2f1026e3c7fdc51ada16bcf2689bade",
+    "manifest": {
+      "path": "D:/linji-role-reads/20261103/app-export/linji-export-manifest.json",
+      "sha256": "9edc30f110b0ae24784bb62b8a3e8ffab87432b601d624433b5629ddfee7bece"
+    },
+    "relocated": "D:/linji-role-reads/20261103/relocated-export",
+    "nativeInstallable": false
+  }
+}

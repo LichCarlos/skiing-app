@@ -1,0 +1,165 @@
+{
+  "date": "2026-11-05",
+  "scope": "local UI optimization and limited browser verification",
+  "uiImplementationComplete": true,
+  "fullSystemAcceptanceComplete": false,
+  "deployed": false,
+  "apkRebuilt": false,
+  "evidenceRoot": "D:\\linji-local\\20261105\\project-ui",
+  "browser": {
+    "checks": [
+      {
+        "name": "feed",
+        "viewport": 390,
+        "page": 390,
+        "text": "雪友的新分享\n发布\n还没有公开动态\n分享你的滑雪日常，让下一次上山多一份灵感。\n\n\n动态\n\n\n雪场\n\n\n知识\n\n\n我的",
+        "styles": 6,
+        "passed": true
+      },
+      {
+        "name": "resorts",
+        "viewport": 390,
+        "page": 390,
+        "text": "雪场\n0 个公开雪场\n按扩展字段查询公开数据\n展开筛选条件\n应用筛选 / 搜索\n清除筛选\n没有符合条件的雪场\n试试其他地区或价格范围，也可以重置筛选条件。\n\n\n动态\n\n\n雪场\n\n\n知识\n\n\n我的",
+        "styles": 6,
+        "passed": true
+      },
+      {
+        "name": "knowledge",
+        "viewport": 390,
+        "page": 390,
+        "text": "滑雪知识\n全部\n0 篇公开文章\n没有找到相关文章\n试试其他关键词或分类。\n\n\n动态\n\n\n雪场\n\n\n知识\n\n\n我的",
+        "styles": 6,
+        "passed": true
+      },
+      {
+        "name": "profile",
+        "viewport": 390,
+        "page": 390,
+        "text": "我的\n客\n游客模式\n开始你的雪上旅程\n登录 / 注册\n关于平台\n隐私政策\n用户协议\n\n\n动态\n\n\n雪场\n\n\n知识\n\n\n我的",
+        "styles": 6,
+        "passed": true
+      },
+      {
+        "name": "auth",
+        "viewport": 390,
+        "page": 390,
+        "text": "返回\n凛\n凛迹雪客\n欢迎回来\n登录\n注册\n账号\n密码\n显示\n登录\n继续以游客身份浏览",
+        "styles": 6,
+        "passed": true
+      },
+      {
+        "name": "ai",
+        "viewport": 390,
+        "page": 390,
+        "text": "滑雪 AI\n登录后可使用滑雪 AI 助手。\n登录 / 注册",
+        "styles": 6,
+        "passed": true
+      },
+      {
+        "name": "settings",
+        "viewport": 390,
+        "page": 390,
+        "text": "账号设置\n账号设置\n登录后可以管理账号密码。\n前往登录\n关于平台\n隐私政策\n用户协议",
+        "styles": 6,
+        "passed": true
+      },
+      {
+        "name": "catalog",
+        "viewport": 390,
+        "page": 390,
+        "text": "公开数据查询\n按公开字段查询\n所有筛选条件同时满足，计数覆盖全部符合条件的数据。\n雪场\n知识文章\n社区动态\n添加筛选条件\n排序字段\n默认顺序\n名称\n省份\n城市\n区县\n起价（元）\n评分\n营业状态\n升序\n降序\n查询公开数据",
+        "styles": 6,
+        "passed": true
+      },
+      {
+        "name": "guest-catalog-post-query-with-csrf",
+        "passed": true
+      },
+      {
+        "name": "tab-chinese-label-heights",
+        "passed": true
+      },
+      {
+        "name": "filters-expand-and-edit",
+        "passed": true
+      },
+      {
+        "name": "register-switch",
+        "passed": true
+      },
+      {
+        "name": "dark-mode-input-surface",
+        "passed": true
+      },
+      {
+        "name": "auth-layout-320",
+        "passed": true,
+        "viewport": 320,
+        "page": 320
+      },
+      {
+        "name": "auth-layout-768",
+        "passed": true,
+        "viewport": 768,
+        "page": 768
+      },
+      {
+        "name": "account",
+        "passed": true,
+        "viewport": 390,
+        "page": 390
+      },
+      {
+        "name": "profile-edit",
+        "passed": true,
+        "viewport": 390,
+        "page": 390
+      },
+      {
+        "name": "favorites",
+        "passed": true,
+        "viewport": 390,
+        "page": 390
+      },
+      {
+        "name": "own-dynamics",
+        "passed": true,
+        "viewport": 390,
+        "page": 390
+      },
+      {
+        "name": "ai-list",
+        "passed": true,
+        "viewport": 390,
+        "page": 390
+      }
+    ],
+    "errors": [],
+    "responses": [
+      {
+        "url": "https://lichcarlos.top/snow-api/api/v1/auth/me",
+        "status": 401
+      },
+      {
+        "url": "https://lichcarlos.top/snow-api/api/v1/auth/refresh",
+        "status": 401
+      }
+    ],
+    "platform": "Expo Web, local exported build"
+  },
+  "verification": {
+    "tests": {
+      "files": 74,
+      "passed": 1240
+    },
+    "lint": "passed",
+    "typecheck": "passed",
+    "build": "Expo Android/iOS/Web bundle exports passed"
+  },
+  "limitations": [
+    "Public production content is empty; no claim of all populated business states tested.",
+    "Expo Web is not Android/iOS device acceptance.",
+    "Admin UI has a separate same-day report."
+  ]
+}

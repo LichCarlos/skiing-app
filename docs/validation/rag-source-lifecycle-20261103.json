@@ -1,0 +1,124 @@
+{
+  "date": "2026-11-03",
+  "passed": true,
+  "scope": "D-46 / ADM-18 / API-AI-03 source read/command lifecycle plus user-approved D-52 stored JSON OpenAPI annotation correction",
+  "contractChange": {
+    "version": "1.51.1",
+    "operations": 143,
+    "sha256": "e5570e24af7bf5670cda3914591924f3c0d4321248c01ce0e7d2a95bd34745a8",
+    "changedPaths": [
+      "/info/version",
+      "/components/schemas/AiConversationAuditMessageVO/properties/citations/type",
+      "/components/schemas/AiConversationAuditMessageVO/properties/citations/nullable",
+      "/components/schemas/AiConversationAuditMessageVO/properties/citations/description",
+      "/components/schemas/AiConversationAuditMessageVO/properties/citations/anyOf"
+    ],
+    "onlyApprovedD52Changes": true
+  },
+  "migrations": 24,
+  "limitations": [
+    "Overall goal incomplete; D-49/D-50/D-09 remain unanswered",
+    "No live native-database/Admin-HTTP/Next/browser/device/provider/container/remote-CI validation in this stage",
+    "Previous 15 real Admin HTTP, 839 full native DB and 8 AI browser tests were not rerun and do not certify changed frontend source",
+    "No Docker start/restart, parent-dependency cleanup, commit, push, deployment or publication",
+    "Recovery metadata is browser-tab memory only; explicit read plus acknowledgement is not proof of historical command execution or server idempotency"
+  ],
+  "initialDiagnostics": [
+    "Three noUncheckedIndexedAccess TypeScript errors corrected before final validation",
+    "Eight stale HTTP spec version assertions caused 165 passed / 8 failed on the first 1.51.1 full suite; updated only expected patch version, final 173 passed"
+  ],
+  "nativeServicesStarted": false,
+  "openapi": {
+    "version": "1.51.1",
+    "operations": 143,
+    "path": "E:/desktop/lishiqi/app/contracts/openapi.json",
+    "sha256": "e5570e24af7bf5670cda3914591924f3c0d4321248c01ce0e7d2a95bd34745a8"
+  },
+  "results": {
+    "frozenInstall": 0,
+    "check": 0,
+    "businessFiles": 66,
+    "businessTests": 1163,
+    "sourceExportNode": 8,
+    "artifactNode": 10,
+    "doctor": "20/20",
+    "lint": "zero warnings/errors; generated OpenAPI file alone overrides the duplicate-type-constituents rule",
+    "export": "iOS,Android,Web",
+    "postExportTypes": 0,
+    "seal": 0,
+    "verify": 0,
+    "relocatedVerify": 0,
+    "businessCodeChanged": false,
+    "generatedTypesChanged": true
+  },
+  "sources": [
+    {
+      "path": "E:/desktop/lishiqi/app/src/platform/api/openapi.ts",
+      "sha256": "a16341204e889e85f89be5514988436792f2da230dbe931196b68709a6bab53e"
+    },
+    {
+      "path": "E:/desktop/lishiqi/app/.oxlintrc.json",
+      "sha256": "819de4c0c908c6f020f3cea520f2404ec3da2cedd85e825dcb3b789fa758df94"
+    },
+    {
+      "path": "E:/desktop/lishiqi/app/scripts/export-artifact.ts",
+      "sha256": "18b4812dc3b95648fe326a2d30aa90de837add082cf8094e6c52779ca0eee8c8"
+    },
+    {
+      "path": "E:/desktop/lishiqi/app/scripts/export-artifact.node-test.ts",
+      "sha256": "689a9d94398c87aa06d4e3821bf4c015bd98f04df32af50e094a1df9fec69cfa"
+    }
+  ],
+  "logs": [
+    {
+      "path": "D:/linji-rag-lifecycle/20261103/app-contract-types.log",
+      "sha256": "724ea5441f2fb3d61d5891e7a84d31e25cc0c78dfb6f4622b4bd923c282d6d54"
+    },
+    {
+      "path": "D:/linji-rag-lifecycle/20261103/app-install.log",
+      "sha256": "6b57a13dd4a9bbd15255434026e0d2514c9618abccbb715114cbb5e7499da959"
+    },
+    {
+      "path": "D:/linji-rag-lifecycle/20261103/app-check-first-generated-warnings.log",
+      "sha256": "6ba54acfb7d3eaf3a105d5c85b6f19200e7ec24805f53140c8c6c269c37daff8"
+    },
+    {
+      "path": "D:/linji-rag-lifecycle/20261103/app-check.log",
+      "sha256": "31158aa94ecb3def386a27603532387165aed1aaafc20107b292ae0e8c77a12e"
+    },
+    {
+      "path": "D:/linji-rag-lifecycle/20261103/app-export.log",
+      "sha256": "59f82cc96f4ed51d81703b93143c09d57b0e3ca501f2b512e8ac1a0eda7d0d26"
+    },
+    {
+      "path": "D:/linji-rag-lifecycle/20261103/app-post-types.log",
+      "sha256": "5a3973f79ed9becd5f23c4feff467513814de7ea381d75a4d2e339aa8b8edca9"
+    },
+    {
+      "path": "D:/linji-rag-lifecycle/20261103/app-seal.log",
+      "sha256": "c5795215b6b189c8a33e5660e0606e70eb6153f73dc39a0f6464e26506be2c5f"
+    },
+    {
+      "path": "D:/linji-rag-lifecycle/20261103/app-verify.log",
+      "sha256": "ba9322e298de0dd7e5844766f0733413da83c9d55b520347e401c0557424cd2e"
+    },
+    {
+      "path": "D:/linji-rag-lifecycle/20261103/app-relocated-verify.log",
+      "sha256": "e61c99e6baf610c7a8d769bcaa4dcdc19b03249b4e8dddb346f110c1bbb0beac"
+    }
+  ],
+  "contractDiff": {
+    "path": "D:/linji-rag-lifecycle/20261103/contract-diff.json",
+    "sha256": "8f1e63a2c621e3bbe1ec291e60878bf0883a93ff2e24c029b7f1bf0cedea3e92"
+  },
+  "artifact": {
+    "manifest": {
+      "path": "D:/linji-rag-lifecycle/20261103/app-export/linji-export-manifest.json",
+      "sha256": "ea104fa429c5ce780a72f96a19e135acf0ab66bf3df1e286791a88420f10b8c9"
+    },
+    "files": 88,
+    "contentSha256": "8a69005456124ca0a2562040f22886a245fc11ce8f7bc5e43863ac918d94f3c0",
+    "relocated": "D:/linji-rag-lifecycle/20261103/relocated-export",
+    "nativeInstallable": false
+  }
+}

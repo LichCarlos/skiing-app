@@ -1,0 +1,44 @@
+{
+  "date": "2026-11-03",
+  "repository": "app",
+  "businessCodeChanged": false,
+  "openapi": {
+    "version": "1.50.2",
+    "operations": 143,
+    "sha256": "710ef0cad15dcfb363f77a9fd1463413ca0290946dda9d1c9a7fbea8e77088e0"
+  },
+  "results": {
+    "install": 0,
+    "check": 0,
+    "tests": 1162,
+    "sourceExportTests": 8,
+    "doctor": "20/20",
+    "exportAllPlatforms": 0,
+    "postExportTypecheck": 0
+  },
+  "output": "D:/linji-dictionary-recovery/20261103/app-export",
+  "notValidated": [
+    "browser",
+    "native device",
+    "container",
+    "App backend integration"
+  ],
+  "logs": [
+    {
+      "path": "E:/desktop/lishiqi/app/dictionary-recovery-install.log",
+      "sha256": "0facf8aa5aeb0a8dd8e7c4d4817168b2a577895f547b73758a9aca97c805147a"
+    },
+    {
+      "path": "E:/desktop/lishiqi/app/dictionary-recovery-check.log",
+      "sha256": "716a66b55a3203dbbe4c3181796dadf9001554751f495cade71e0c642012930d"
+    },
+    {
+      "path": "E:/desktop/lishiqi/app/dictionary-recovery-export.log",
+      "sha256": "d03f052d4e3906389a66062f0118d2c16a6983494ec9be65bb638a45c9e2ba53"
+    },
+    {
+      "path": "E:/desktop/lishiqi/app/dictionary-recovery-post-export-types.log",
+      "sha256": "5a3973f79ed9becd5f23c4feff467513814de7ea381d75a4d2e339aa8b8edca9"
+    }
+  ]
+}
