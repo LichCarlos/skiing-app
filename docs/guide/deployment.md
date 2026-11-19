@@ -1,6 +1,6 @@
 # App 构建、签名、交付与回滚
 
-本仓包含原生构建配置与 JS bundle 导出工具。2026-11-12 的图片更新仅同步源码，未构建新 APK；此前测试 APK 的设备验收状态见历史发布记录。以下是完整发布教程，不表示已完成商店发布。
+本仓包含原生构建配置与 JS bundle 导出工具。空白电脑先按[工具下载、真实 EAS 项目绑定、环境变量与 APK 构建](from-zero.md)操作，不需要作者私有 runtime 脚本。2026-11-19 已构建 1.0.4 / versionCode 5 ARM64 APK，模拟器检查通过，实体手机由用户安装测试；2026-11-12“仅源码”说明只属于历史批次。当前没有商店发布结论。
 
 ## 1. 区分交付物
 
@@ -37,7 +37,7 @@ pnpm check
 pnpm release:check
 ```
 
-PowerShell 可用 `$env:LINJI_APP_ENV='preview'`；Bash 用 `export LINJI_APP_ENV=preview`，production 同理。检查器调用 Expo config introspect 验证身份、HTTPS URL、SecureStore 备份规则和契约；不会构建、上传或替用户创建 EAS 项目。
+PowerShell 可用 `$env:LINJI_APP_ENV='preview'`；Bash 用 `export LINJI_APP_ENV=preview`，production 同理。release:check 本身不读取 .env，全部身份变量都须进入当前进程，完整赋值示例见从零手册。检查器调用 Expo config introspect 验证身份、HTTPS URL、SecureStore 备份规则和契约；不会构建、上传或替用户创建 EAS 项目。
 
 `.easignore` 存在时不再自动使用 `.gitignore`，两处需同步维护 SDK/签名/私有文件排除。上传前检查 EAS 源码 archive 内容，确保没有 SDK、node_modules、.env、keystore、模型、日志和历史构建产物；必要业务资源、配置、发布检查脚本和锁文件必须保留。
 
@@ -46,8 +46,8 @@ PowerShell 可用 `$env:LINJI_APP_ENV='preview'`；Bash 用 `export LINJI_APP_EN
 先通过官方 EAS CLI 完成账号登录与项目归属核对，在本仓根执行：
 
 ```bash
-npx eas-cli@latest build --profile preview --platform android
-npx eas-cli@latest build --profile production --platform all
+npx eas-cli@27.10.0 build --profile preview --platform android
+npx eas-cli@27.10.0 build --profile production --platform all
 ```
 
 preview 为 internal，Android 输出 APK；production 为 store，Android 输出 AAB。production 使用 remote app version 与 autoIncrement，构建前核对当前版本，不能覆盖身份/签名。iOS 构建需要正确 Apple 签名与渠道配置。云构建可能消耗账号额度/产生费用，按自己的发布授权执行。

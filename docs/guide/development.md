@@ -1,5 +1,7 @@
 # App 本地开发与联调教程
 
+首次安装请按[空白电脑的工具下载、API 与 App 联调](from-zero.md)完成前置条件；该手册还提供 EAS APK 与本地调试的独立路径。
+
 ## 环境与依赖
 
 使用 Node 22.16.0、pnpm 11.25.0，按 README 独立 clone 和冻结安装。本仓 Expo SDK 58 与 React Native 0.88；已有 Android SDK/NDK/JDK 位于开发机外部工具目录，依赖声明和锁文件保留在 Git，不提交工具安装目录或二进制。

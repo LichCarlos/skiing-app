@@ -1,7 +1,8 @@
 # App 文档索引
 
-## 当前教程入口（2026-11-12）
+## 当前教程入口（2026-11-19）
 
+- [从空白电脑到三端运行与部署：版本下载、环境与验收](guide/from-zero.md)
 - [三仓协作与技术学习路线](guide/learning-roadmap.md)
 - [本地开发教程](guide/development.md)
 - [部署与发布教程](guide/deployment.md)
@@ -10,7 +11,6 @@
 - [SDK 58 补丁与首次公开仓库 CI](engineering/sdk58-maintenance-20261112.md)
 
 以下为历次工程与验收记录，状态按各自日期理解。
-
 
 - [2026-11-06 原生按压与键盘焦点反馈](engineering/community-ui-feedback-20261106.md)：1260项测试通过，未打新APK，真机待验。
 
