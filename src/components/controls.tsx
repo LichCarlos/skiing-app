@@ -50,7 +50,12 @@ export function Pressable({
         onBlur?.(event);
       }}
       style={(state) => [
-        { minHeight: 44, justifyContent: "center" },
+        {
+          minHeight: 48,
+          justifyContent: "center",
+          borderRadius: radius.md,
+          borderCurve: "continuous",
+        },
         typeof style === "function" ? style(state) : style,
         controlFeedback({
           disabled: !!disabled,
@@ -97,7 +102,7 @@ export function TextInput({
           backgroundColor: colors.surface,
           paddingHorizontal: 14,
           paddingVertical: 12,
-          borderWidth: 1,
+          borderWidth: 2,
           borderColor: colors.inputBorder,
         },
         style,

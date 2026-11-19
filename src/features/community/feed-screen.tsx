@@ -1,5 +1,5 @@
 import { EmptyState } from "../../components/empty-state";
-import { createThemedStyles, radius } from "../../theme";
+import { brutalFrame, createThemedStyles, radius } from "../../theme";
 import {
   ActivityIndicator,
   Pressable,
@@ -261,6 +261,8 @@ function formatDate(value: string) {
 const useStyles = createThemedStyles((colors) => ({
   screen: { flex: 1, backgroundColor: colors.background },
   topbar: {
+    borderBottomWidth: 2,
+    borderBottomColor: colors.border,
     minHeight: 62,
     paddingHorizontal: 20,
     flexDirection: "row",
@@ -270,6 +272,7 @@ const useStyles = createThemedStyles((colors) => ({
   },
   heading: { color: colors.highlightText, fontSize: 24, fontWeight: "700" },
   composeButton: {
+    ...brutalFrame(colors, true),
     minWidth: 68,
     minHeight: 44,
     alignItems: "center",
@@ -286,7 +289,7 @@ const useStyles = createThemedStyles((colors) => ({
     borderRadius: radius.md,
     backgroundColor: colors.surface,
     color: colors.text,
-    borderWidth: 1,
+    borderWidth: 2,
     borderColor: colors.border,
   },
   listContent: {
@@ -297,6 +300,10 @@ const useStyles = createThemedStyles((colors) => ({
     flexGrow: 1,
   },
   row: {
+    ...brutalFrame(colors, true),
+    marginHorizontal: 16,
+    marginBottom: 4,
+    borderRadius: radius.lg,
     paddingHorizontal: 20,
     paddingVertical: 16,
     backgroundColor: colors.surface,
@@ -329,7 +336,7 @@ const useStyles = createThemedStyles((colors) => ({
     backgroundColor: colors.soft,
   },
   counts: { flexDirection: "row", gap: 18, marginTop: 13 },
-  separator: { height: 8, backgroundColor: colors.background },
+  separator: { height: 16, backgroundColor: colors.background },
   state: {
     flex: 1,
     alignItems: "center",

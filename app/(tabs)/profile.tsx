@@ -1,5 +1,5 @@
 import { Text } from "../../components/Themed";
-import { createThemedStyles, radius } from "../../src/theme";
+import { brutalFrame, createThemedStyles, radius } from "../../src/theme";
 import { Pressable } from "../../src/components/controls";
 import { palette as colors } from "../../src/theme";
 import { useCallback, useRef, useState } from "react";
@@ -108,7 +108,7 @@ function ProfileWorkspace(): React.JSX.Element {
                   {user.avatarUrl && failedAvatar !== user.avatarUrl ? (
                     <Image
                       source={{ uri: user.avatarUrl }}
-                      style={styles.avatar}
+                      style={styles.avatarImage}
                       onError={() => setFailedAvatar(user.avatarUrl)}
                     />
                   ) : (
@@ -331,7 +331,7 @@ function firstCodePoint(value: string): string {
   return Array.from(value)[0] ?? "雪";
 }
 
-const useStyles = createThemedStyles(() => ({
+const useStyles = createThemedStyles((colors) => ({
   page: { flex: 1 },
   content: {
     paddingHorizontal: 24,
@@ -349,8 +349,16 @@ const useStyles = createThemedStyles(() => ({
     justifyContent: "center",
   },
   stateText: { marginTop: 12, fontSize: 14 },
-  identity: { flexDirection: "row", alignItems: "center", marginBottom: 22 },
+  identity: {
+    ...brutalFrame(colors),
+    padding: 16,
+    borderRadius: radius.lg,
+    flexDirection: "row",
+    alignItems: "center",
+    marginBottom: 22,
+  },
   avatar: {
+    ...brutalFrame(colors),
     width: 58,
     height: 58,
     borderRadius: 16,
@@ -358,6 +366,7 @@ const useStyles = createThemedStyles(() => ({
     justifyContent: "center",
   },
   avatarText: { fontSize: 25, fontWeight: "700" },
+  avatarImage: { width: 54, height: 54, borderRadius: 14 },
   identityCopy: { marginLeft: 14, flex: 1 },
   name: { fontSize: 22, fontWeight: "700" },
   account: { fontSize: 14, marginTop: 4 },
@@ -390,6 +399,7 @@ const useStyles = createThemedStyles(() => ({
   },
   secondaryButtonText: { fontSize: 15, fontWeight: "600" },
   guestMark: {
+    ...brutalFrame(colors, true),
     width: 68,
     height: 68,
     borderRadius: 20,
@@ -404,6 +414,7 @@ const useStyles = createThemedStyles(() => ({
   retryButton: { alignSelf: "flex-start", paddingVertical: 10 },
   linkText: { fontSize: 14, fontWeight: "600" },
   primaryButton: {
+    ...brutalFrame(colors, true),
     minHeight: 52,
     borderRadius: radius.md,
     alignItems: "center",

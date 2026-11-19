@@ -1,24 +1,35 @@
 import { Tabs } from "expo-router";
+import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { SymbolView } from "expo-symbols";
-import { useAppColors } from "../../src/theme";
+import { radius, spacing, useAppColors } from "../../src/theme";
+import { RoundedTabButton } from "../../src/platform/navigation/rounded-tab-button";
 
 export default function TabLayout() {
   const colors = useAppColors();
+  const insets = useSafeAreaInsets();
+  const bottomInset = Math.max(insets.bottom, 8);
   return (
     <Tabs
       screenOptions={{
         headerShown: false,
+        sceneStyle: { paddingTop: insets.top, backgroundColor: colors.background },
         headerTitleAlign: "left",
         headerShadowVisible: false,
         headerStyle: { backgroundColor: colors.background },
         headerTintColor: colors.text,
-        tabBarActiveTintColor: colors.highlight,
-        tabBarInactiveTintColor: colors.onImage,
+        tabBarLabelPosition: "below-icon",
+        tabBarButton: (props) => <RoundedTabButton {...props} />,
+        tabBarActiveTintColor: colors.primaryText,
+        tabBarInactiveTintColor: colors.text,
+        tabBarActiveBackgroundColor: colors.primary,
         tabBarStyle: {
-          minHeight: 64,
-          paddingBottom: 8,
+          height: 84 + bottomInset,
+          paddingTop: spacing.sm,
+          paddingHorizontal: spacing.sm,
+          paddingBottom: bottomInset,
           backgroundColor: colors.navigation,
-          borderTopColor: colors.navigation,
+          borderTopColor: colors.border,
+          borderTopWidth: 2,
         },
         tabBarLabelStyle: {
           fontSize: 12,
@@ -26,7 +37,15 @@ export default function TabLayout() {
           fontWeight: "600",
           flexShrink: 0,
         },
-        tabBarItemStyle: { paddingVertical: 0 },
+        tabBarItemStyle: {
+          marginHorizontal: spacing.xs,
+          marginBottom: spacing.sm,
+          borderWidth: 2,
+          borderColor: colors.border,
+          borderRadius: radius.lg,
+          borderCurve: "continuous",
+          overflow: "hidden",
+        },
       }}
     >
       <Tabs.Screen
@@ -81,6 +100,7 @@ export default function TabLayout() {
         options={{
           title: "我的",
           headerShown: true,
+          sceneStyle: { paddingTop: 0, backgroundColor: colors.background },
           tabBarIcon: ({ color, size }) => (
             <SymbolView
               name={{

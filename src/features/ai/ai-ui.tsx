@@ -1,6 +1,6 @@
-import { ActivityIndicator } from "../../components/controls";
+import { ActivityIndicator, Pressable } from "../../components/controls";
 import { Text } from "../../../components/Themed";
-import { createThemedStyles, radius } from "../../theme";
+import { brutalFrame, createThemedStyles, radius } from "../../theme";
 import { Link } from "expo-router";
 import { View } from "react-native";
 import { useAuthSession } from "../../platform/auth/session-provider";
@@ -26,13 +26,9 @@ export function AiAccess({
     return (
       <View style={aiStyles.state}>
         <Text>当前账号尚未获准使用 AI，请联系管理员。</Text>
-        <Text
-          accessibilityRole="button"
-          style={aiStyles.link}
-          onPress={() => void session.retryRestore()}
-        >
-          重新读取身份
-        </Text>
+        <Pressable onPress={() => void session.retryRestore()}>
+          <Text style={aiStyles.link}>重新读取身份</Text>
+        </Pressable>
       </View>
     );
   return (
@@ -78,6 +74,7 @@ export const useAiStyles = createThemedStyles((colors) => ({
     flexWrap: "wrap",
   },
   card: {
+    ...brutalFrame(colors),
     padding: 20,
     backgroundColor: colors.surface,
     borderRadius: radius.lg,
@@ -85,6 +82,7 @@ export const useAiStyles = createThemedStyles((colors) => ({
   },
   userCard: { backgroundColor: colors.soft, marginLeft: 24 },
   button: {
+    ...brutalFrame(colors, true),
     backgroundColor: colors.primary,
     borderRadius: radius.md,
     paddingVertical: 12,
@@ -96,7 +94,7 @@ export const useAiStyles = createThemedStyles((colors) => ({
   input: {
     backgroundColor: colors.surface,
     borderColor: colors.inputBorder,
-    borderWidth: 1,
+    borderWidth: 2,
     padding: 14,
     borderRadius: radius.md,
     color: colors.text,

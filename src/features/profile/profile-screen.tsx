@@ -257,7 +257,7 @@ const useStyles = createThemedStyles((colors) => ({
   avatar: { alignItems: "center", justifyContent: "center", minHeight: 96 },
   image: { width: 96, height: 96, borderRadius: 48 },
   input: {
-    borderWidth: 1,
+    borderWidth: 2,
     borderColor: colors.inputBorder,
     borderRadius: radius.md,
     padding: 14,
@@ -267,7 +267,7 @@ const useStyles = createThemedStyles((colors) => ({
   button: {
     minHeight: 44,
     justifyContent: "center",
-    borderWidth: 1,
+    borderWidth: 2,
     borderColor: colors.inputBorder,
     borderRadius: radius.md,
     padding: 12,

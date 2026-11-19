@@ -278,10 +278,10 @@ const useStyles = createThemedStyles((c) => ({
   placeholder: {
     padding: 16,
     color: c.muted,
-    borderWidth: 1,
+    borderWidth: 2,
     borderColor: c.border,
   },
   tableRow: { flexDirection: "row" },
-  cell: { width: 170, padding: 10, borderWidth: 1, borderColor: c.border },
+  cell: { width: 170, padding: 10, borderWidth: 2, borderColor: c.border },
   tableHeader: { backgroundColor: c.segment },
 }));

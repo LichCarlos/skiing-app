@@ -48,7 +48,12 @@ describe("native Pressable integration with static Native substitute", () => {
       pressed: boolean;
     }) => unknown[];
     expect(style({ pressed: false })).toEqual([
-      { minHeight: 44, justifyContent: "center" },
+      {
+        minHeight: 48,
+        justifyContent: "center",
+        borderRadius: 12,
+        borderCurve: "continuous",
+      },
       { opacity: 0.7, transform: [{ scale: 0.9 }] },
       {},
     ]);

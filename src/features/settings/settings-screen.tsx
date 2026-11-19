@@ -304,7 +304,7 @@ const useStyles = createThemedStyles((colors) => ({
   field: { gap: 6 },
   input: {
     minHeight: 48,
-    borderWidth: 1,
+    borderWidth: 2,
     borderColor: colors.border,
     borderRadius: radius.md,
     paddingHorizontal: 13,

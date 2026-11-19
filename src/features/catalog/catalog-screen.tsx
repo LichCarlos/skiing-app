@@ -427,12 +427,12 @@ const useStyles = createThemedStyles((colors) => ({
   title: { fontSize: 24, fontWeight: "700" },
   heading: { fontSize: 16, fontWeight: "600" },
   row: { flexDirection: "row", flexWrap: "wrap", gap: 8, alignItems: "center" },
-  filter: { padding: 12, gap: 12, borderWidth: 1, borderColor: colors.border },
+  filter: { padding: 12, gap: 12, borderWidth: 2, borderColor: colors.border },
   choice: {
     minHeight: 44,
     justifyContent: "center",
     padding: 10,
-    borderWidth: 1,
+    borderWidth: 2,
     borderColor: colors.border,
     borderRadius: radius.md,
   },
@@ -440,7 +440,7 @@ const useStyles = createThemedStyles((colors) => ({
   disabled: { opacity: 0.5 },
   input: {
     minHeight: 44,
-    borderWidth: 1,
+    borderWidth: 2,
     borderColor: colors.border,
     padding: 12,
     color: colors.text,

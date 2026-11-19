@@ -31,6 +31,7 @@ export function RootNavigator() {
       >
         <Stack
           screenOptions={{
+            statusBarStyle: colorScheme === "dark" ? "light" : "dark",
             headerTintColor: colors.text,
             headerShadowVisible: false,
             headerStyle: { backgroundColor: colors.background },

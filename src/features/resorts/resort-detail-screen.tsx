@@ -340,7 +340,7 @@ const useStyles = createThemedStyles((colors) => ({
     paddingHorizontal: 14,
     alignItems: "center",
     justifyContent: "center",
-    borderWidth: 1,
+    borderWidth: 2,
     borderColor: colors.primary,
     borderRadius: radius.md,
   },

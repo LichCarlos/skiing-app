@@ -4,6 +4,8 @@
 
 ## 当前状态
 
+2026-11-19：App 按钮统一使用圆角；底部动态、雪场、知识、我的入口使用 16dp 圆角，选中背景和触控反馈同步裁剪，保留粗边框、主题配色与底部安全区。修复知识分类横向列表裁切按钮边缘的问题。检查记录见[圆角导航更新](docs/engineering/rounded-tabbar-20261119.md)。本机签名 APK 与校验文件放在 `outputs/apk/`。
+
 2026-11-12：源码已取消动态与正文图片的固定张数上限，150 张图片模型与解析测试通过，1263 项业务测试、lint 和类型检查通过；同步 OpenAPI **1.55.0**。**本次没有重新构建 APK/AAB/IPA**，线上既有安装包不包含这次 App 源码更新。见[图片更新记录](docs/engineering/article-images-20261112.md)。
 
 此前交付过 1.0.2 arm64 测试签名 APK，物理真机与 iOS 验收仍有待办；旧文档中的阶段状态须按日期理解。测试、bundle 导出、签名构建、真机安装和应用商店发布是不同成果。
@@ -91,3 +93,5 @@ pnpm ios
 `.github/workflows/ci.yml` 执行检查、虚构身份配置验证和三平台导出；`security.yml` 检查 SDK/凭证与历史秘密。工作流不会自动签名、推送安装包或更新线上 API。
 
 详见[发布教程](docs/guide/deployment.md)、[安全管理](docs/guide/repository-security.md)与[公开前历史 README](docs/history/readme-before-publication-20261112.md)。
+
+本机 2026-11-19 的签名 APK 1.0.4 位于 `outputs/apk/linji-snow-1.0.4-arm64.apk`，已完成 Android 模拟器安装与界面检查，实体手机测试由用户安装后完成；目录约定与新构建入口见[部署教程](docs/guide/deployment.md)。

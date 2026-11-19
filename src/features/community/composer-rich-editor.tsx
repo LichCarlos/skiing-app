@@ -207,7 +207,7 @@ const useStyles = createThemedStyles((c) => ({
   tool: {
     minHeight: 44,
     padding: 10,
-    borderWidth: 1,
+    borderWidth: 2,
     borderColor: c.border,
     borderRadius: 10,
     justifyContent: "center",
@@ -215,7 +215,7 @@ const useStyles = createThemedStyles((c) => ({
   input: {
     minHeight: 220,
     padding: 16,
-    borderWidth: 1,
+    borderWidth: 2,
     borderColor: c.inputBorder,
     borderRadius: 16,
     color: c.text,
@@ -227,7 +227,7 @@ const useStyles = createThemedStyles((c) => ({
   linkForm: {
     gap: 10,
     padding: 12,
-    borderWidth: 1,
+    borderWidth: 2,
     borderColor: c.border,
     borderRadius: 12,
   },

@@ -171,7 +171,7 @@ const useStyles = createThemedStyles((colors) => ({
   results: {
     gap: 10,
     padding: 12,
-    borderWidth: 1,
+    borderWidth: 2,
     borderColor: colors.border,
     borderRadius: radius.md,
   },
@@ -180,7 +180,7 @@ const useStyles = createThemedStyles((colors) => ({
     paddingHorizontal: 12,
     backgroundColor: colors.surface,
     color: colors.text,
-    borderWidth: 1,
+    borderWidth: 2,
     borderColor: colors.border,
     borderRadius: radius.md,
   },

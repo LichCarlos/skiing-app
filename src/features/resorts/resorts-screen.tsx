@@ -1,5 +1,5 @@
 import { EmptyState } from "../../components/empty-state";
-import { createThemedStyles, radius } from "../../theme";
+import { brutalFrame, createThemedStyles, radius } from "../../theme";
 import { ActivityIndicator, Pressable } from "../../components/controls";
 import { useCallback, useState } from "react";
 import { Image, RefreshControl, ScrollView, View } from "react-native";
@@ -342,23 +342,24 @@ const useStyles = createThemedStyles((colors) => ({
     alignSelf: "center",
   },
   heading: {
+    ...brutalFrame(colors),
     flexDirection: "row",
     alignItems: "baseline",
     justifyContent: "space-between",
     padding: 14,
     borderRadius: radius.md,
-    backgroundColor: colors.highlight,
+    backgroundColor: colors.warm,
   },
   title: { fontSize: 24, fontWeight: "700", color: colors.highlightText },
   count: { color: colors.highlightText, fontSize: 13 },
   list: { gap: 16 },
   row: {
+    ...brutalFrame(colors, true),
     minHeight: 112,
     flexDirection: "row",
     alignItems: "center",
     gap: 8,
     padding: 16,
-    borderWidth: 0,
     borderRadius: radius.md,
     backgroundColor: colors.surface,
   },

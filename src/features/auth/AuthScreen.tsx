@@ -1,5 +1,5 @@
 import { Text } from "../../../components/Themed";
-import { createThemedStyles, radius } from "../../theme";
+import { brutalFrame, createThemedStyles, radius } from "../../theme";
 import {
   ActivityIndicator,
   Pressable,
@@ -385,6 +385,7 @@ const useStyles = createThemedStyles((colors) => ({
   backButton: { height: 36, justifyContent: "center", alignSelf: "flex-start" },
   backText: { fontSize: 15, fontWeight: "600" },
   brandMark: {
+    ...brutalFrame(colors, true),
     width: 44,
     height: 44,
     borderRadius: 12,
@@ -407,6 +408,7 @@ const useStyles = createThemedStyles((colors) => ({
     marginBottom: 22,
   },
   segment: {
+    ...brutalFrame(colors),
     minHeight: 48,
     borderRadius: radius.md,
     padding: 4,
@@ -426,7 +428,7 @@ const useStyles = createThemedStyles((colors) => ({
   label: { fontSize: 14, fontWeight: "600", marginBottom: 7 },
   inputShell: {
     minHeight: 52,
-    borderWidth: 1,
+    borderWidth: 2,
     borderRadius: radius.md,
     paddingHorizontal: 14,
     flexDirection: "row",
@@ -449,7 +451,7 @@ const useStyles = createThemedStyles((colors) => ({
   },
   fieldError: { fontSize: 13, marginTop: 5 },
   notice: {
-    borderWidth: 1,
+    borderWidth: 2,
     borderRadius: radius.md,
     padding: 12,
     marginTop: 2,
@@ -457,6 +459,7 @@ const useStyles = createThemedStyles((colors) => ({
   },
   traceId: { fontSize: 13, marginTop: 5 },
   submitButton: {
+    ...brutalFrame(colors, true),
     minHeight: 52,
     borderRadius: radius.md,
     alignItems: "center",

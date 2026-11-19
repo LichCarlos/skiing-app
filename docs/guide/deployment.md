@@ -86,3 +86,7 @@ pnpm artifact:verify <新导出目录>
 ```
 
 目录占位符替换为真实导出路径（默认 dist）。封装清单核对文件摘要与契约，导出不含原生安装包；源码另用 `pnpm source:export <新目录>`，两类归档不能混淆。工具和原生配置细节见[既有原生发布说明](../engineering/native-release.md)与[SDK58维护](../engineering/sdk58-maintenance-20261104.md)。
+
+## 2026-11-19 本机目录约定
+
+本机安装包位于 app/outputs/apk/（相对三仓父目录）。构建副本、专属缓存和新日志统一放父目录 runtime/builds/app/，新入口为该目录的 build-apk.ps1，可先用 -Plan 查看路径。通过临时盘符映射缩短 Windows 编译路径，结束后自动解除，禁止在 D 盘根创建实体构建目录。迁移后的旧原生缓存只作归档；新入口已用于 1.0.4 release 全量构建。Windows 原生项目、代码生成及 Hermes 路径统一、编译并发限制与验收说明见[圆角导航更新](../engineering/rounded-tabbar-20261119.md)。

@@ -217,7 +217,7 @@ const useStyles = createThemedStyles((colors) => ({
   input: {
     minHeight: 44,
     paddingHorizontal: 12,
-    borderWidth: 1,
+    borderWidth: 2,
     borderColor: colors.border,
     borderRadius: radius.md,
     backgroundColor: colors.surface,
@@ -229,7 +229,7 @@ const useStyles = createThemedStyles((colors) => ({
     minHeight: 44,
     paddingHorizontal: 12,
     paddingVertical: 10,
-    borderWidth: 1,
+    borderWidth: 2,
     borderColor: colors.border,
     borderRadius: radius.md,
     justifyContent: "center",

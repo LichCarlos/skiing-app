@@ -1,4 +1,4 @@
-import { createThemedStyles, radius } from "../../theme";
+import { brutalFrame, createThemedStyles, radius } from "../../theme";
 import {
   ActivityIndicator,
   Pressable,
@@ -145,6 +145,7 @@ function KnowledgeList() {
         ]}
         keyExtractor={(item) => item.value || "all"}
         showsHorizontalScrollIndicator={false}
+        style={styles.categoryViewport}
         contentContainerStyle={styles.categoryList}
         renderItem={({ item }) => (
           <Pressable
@@ -327,9 +328,13 @@ function formatDate(value: string): string {
 const useStyles = createThemedStyles((colors) => ({
   screen: { flex: 1, backgroundColor: colors.background, paddingTop: 14 },
   heading: {
+    backgroundColor: colors.highlight,
+    padding: 14,
+    borderRadius: radius.md,
+    ...brutalFrame(colors),
     marginHorizontal: 20,
     marginBottom: 14,
-    color: colors.text,
+    color: colors.highlightText,
     fontSize: 22,
     fontWeight: "700",
   },
@@ -338,18 +343,19 @@ const useStyles = createThemedStyles((colors) => ({
     marginHorizontal: 20,
     marginBottom: 12,
     paddingHorizontal: 12,
-    borderWidth: 1,
+    borderWidth: 2,
     borderColor: colors.border,
     borderRadius: radius.md,
     backgroundColor: colors.surface,
     color: colors.text,
   },
+  categoryViewport: { flexGrow: 0, flexShrink: 0 },
   categoryList: { paddingHorizontal: 20, paddingBottom: 13, gap: 8 },
   categoryButton: {
     minHeight: 44,
     justifyContent: "center",
     paddingHorizontal: 12,
-    borderWidth: 1,
+    borderWidth: 2,
     borderColor: colors.border,
     borderRadius: radius.md,
     backgroundColor: colors.surface,
@@ -386,7 +392,15 @@ const useStyles = createThemedStyles((colors) => ({
     flexGrow: 1,
   },
   listHeading: { paddingVertical: 12, alignItems: "center", gap: 8 },
-  article: { flexDirection: "row", gap: 16, paddingVertical: 20 },
+  article: {
+    ...brutalFrame(colors, true),
+    backgroundColor: colors.surface,
+    borderRadius: radius.lg,
+    marginBottom: 4,
+    flexDirection: "row",
+    gap: 12,
+    padding: 14,
+  },
   cover: {
     width: 108,
     height: 116,
@@ -417,6 +431,6 @@ const useStyles = createThemedStyles((colors) => ({
   },
   summary: { color: colors.muted, fontSize: 14, lineHeight: 22 },
   author: { marginTop: "auto", color: colors.muted, fontSize: 11 },
-  separator: { height: 1, backgroundColor: colors.border },
+  separator: { height: 16 },
   footerLoading: { marginTop: 12, marginBottom: 18 },
 }));

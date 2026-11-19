@@ -564,7 +564,7 @@ const useStyles = createThemedStyles((colors) => ({
     minHeight: 44,
     maxHeight: 120,
     padding: 10,
-    borderWidth: 1,
+    borderWidth: 2,
     borderColor: colors.border,
     borderRadius: radius.md,
     color: colors.text,

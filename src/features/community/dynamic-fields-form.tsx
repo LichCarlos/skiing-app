@@ -168,7 +168,7 @@ const useStyles = createThemedStyles((colors) => ({
   field: { gap: 8 },
   input: {
     minHeight: 44,
-    borderWidth: 1,
+    borderWidth: 2,
     borderColor: colors.border,
     padding: 12,
     color: colors.text,
@@ -178,7 +178,7 @@ const useStyles = createThemedStyles((colors) => ({
   option: {
     minHeight: 44,
     padding: 12,
-    borderWidth: 1,
+    borderWidth: 2,
     borderColor: colors.border,
   },
   selected: { borderColor: colors.primary, borderWidth: 3 },
